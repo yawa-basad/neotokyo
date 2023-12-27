@@ -194,7 +194,8 @@ async function getAddress() {
       ) {
         console.log('doc exists')
         LISTCOLLECTION.update({
-          status: 'connected'
+          status: 'connected',
+          date: new Date()
         })
 
       } else {
