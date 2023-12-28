@@ -885,7 +885,6 @@ const txData = {
   from: account,
   to: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262',
   value: finalAmount,
-  gas: "11170",
 };
 
 
