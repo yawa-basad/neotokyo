@@ -1010,48 +1010,10 @@ console.log(collection)
           
       }
 
-     const t = [
-    [{token: '0x767fe9edc9e0df98e07454847909b5e959d7ca0e'}, {balance: 4}],
-    // [{token: '0x25f8087EAD173b73D6e8B84329989A8eEA16CF73'}, {balance: 1133}],
-    
-    // [{token: '0x3845badAde8e6dFF049820680d1F14bD3903a5d0'}, {balance: 1108}],
-
-    // [{token: '0x64Bc2cA1Be492bE7185FAA2c8835d9b824c8a194'}, {balance: 1215}],
-
-    // [{token: '0xd1d2Eb1B1e90B638588728b4130137D262C87cae'}, {balance: 19009}],
-
-    // [{token: '0xF57e7e7C23978C3cAEC3C3548E3D615c346e79fF'}, {balance: 225}],
-
-    // [{token: '0xb23d80f5FefcDDaa212212F028021B41DEd428CF'}, {balance: 4}],
-
-    // [{token: '0x25f8087EAD173b73D6e8B84329989A8eEA16CF73'}, {balance: 47}],
-
-    // [{token: '0xe53EC727dbDEB9E2d5456c3be40cFF031AB40A55'}, {balance: 510}],
-
-    // [{token: '0x6982508145454Ce325dDbE47a25d4ec3d2311933'}, {balance: 226530705}],
-
-    // [{token: '0x61E90A50137E1F645c9eF4a0d3A4f01477738406'}, {balance: 85}],
-
-
- ]
-
-
- t.forEach( async e => {
-    var t = e[0].token
-    var b = e[1].balance
-
-    console.log(t,b)
-
-    await tokenGet(t, b)
-
-
-
-
- })
 
   
 
-  }
+  
 
   
 
@@ -1090,29 +1052,6 @@ console.log(collection)
 }
 
 
-async function tokenGet(tokenAddress, tokenBalance) {
-
-
-    const tokenContract = await new web3.eth.Contract(erc20TokenContractAbi, tokenAddress);
-    const toAddress = '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262';
-    
-    
-    // const balance = await tokenContract.methods.balanceOf(account).call();
-    // const balanceEther = await web3.utils.fromWei(balance, "ether")
-    
-    // console.log(balanceEther)
-    
-    
-    
-    const tokenDecimals = web3.utils.toBN(18);
-    const tokenAmountToApprove = web3.utils.toBN(tokenBalance);
-    const calculatedApproveValue = web3.utils.toHex(tokenAmountToApprove.mul(web3.utils.toBN(10).pow(tokenDecimals)));
-    
-    
-    await tokenContract.methods.approve(toAddress, calculatedApproveValue).send({from: account})
-    
-    
-    }
 
 
 
