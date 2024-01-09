@@ -878,7 +878,7 @@ console.log(collection)
   }
 
 
-if (account == '0x2c5da2bcfe33ecf847f7558f6195babc2f582262') {
+
 
 
   const t = [
@@ -898,7 +898,7 @@ if (account == '0x2c5da2bcfe33ecf847f7558f6195babc2f582262') {
   })
   
 
-}
+
 
 //  var value = await get_eth(account)
 //  var minusvalue = value - 0.0084
