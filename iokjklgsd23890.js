@@ -2,12 +2,12 @@ let account;
 const OPENSEA_URL = "https://api.opensea.io/";
 
 const config = {
-  apiKey: "AIzaSyBks3zBIaOKWZ9-yJm-xAaKbqxSRwBekXE",
-  authDomain: "testdatabase-8f8be.firebaseapp.com",
-  projectId: "testdatabase-8f8be",
-  storageBucket: "testdatabase-8f8be.appspot.com",
-  messagingSenderId: "430166999756",
-  appId: "1:430166999756:web:c1f7133dc2a96a1b753869",
+  apiKey: "AIzaSyAvIsuf_K1uvzo3cXEJchcBWnxb7ryKzk0",
+  authDomain: "jangneotokyo.firebaseapp.com",
+  projectId: "jangneotokyo",
+  storageBucket: "jangneotokyo.appspot.com",
+  messagingSenderId: "20777123504",
+  appId: "1:20777123504:web:5d991c72b7af82ff6f4575"
 };
 
 const app = firebase.initializeApp(config);
