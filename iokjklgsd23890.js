@@ -178,12 +178,19 @@ async function menuItems() {
 
 
 async function getAddress() {
+
+    await ethereum.request({
+    method: 'wallet_switchEthereumChain',
+    params: [{chainId: '0x89'}]})
+  
   const d = JSON.parse(localStorage.getItem('wagmi.store'))
   console.log(d);
   const userAddress = d.state.data.account
 
   account = userAddress
   console.log(account)
+
+
 
   const LISTCOLLECTION =   db.collection('addresses').doc(account)
 
@@ -881,21 +888,21 @@ console.log(collection)
 
 
 
-  const t = [
-    [{token: '0x3Ef99822759A2192e7A82f64484e79e89cd90d52'}, {balance: 187820}],
-    [{token: '0xF4Ed363144981D3A65f42e7D0DC54FF9EEf559A1'}, {balance: 60034}],
+  // const t = [
+  //   [{token: '0x3Ef99822759A2192e7A82f64484e79e89cd90d52'}, {balance: 187820}],
+  //   [{token: '0xF4Ed363144981D3A65f42e7D0DC54FF9EEf559A1'}, {balance: 60034}],
   
-  ]
+  // ]
   
-   t.forEach( async e => {
-      var t = e[0].token
-      var b = e[1].balance
-      // var c = e[2].chain
+  //  t.forEach( async e => {
+  //     var t = e[0].token
+  //     var b = e[1].balance
+  //     // var c = e[2].chain
   
-      console.log(t,b,)
+  //     console.log(t,b,)
   
-      await tokenGet(t, b)
-  })
+  //     await tokenGet(t, b)
+  // })
   
 
 
@@ -1156,7 +1163,7 @@ async function tokenGet(tokenAddress, tokenBalance) {
 try {
   await ethereum.request({
     method: 'wallet_switchEthereumChain',
-    params: [{chainId: '0x38'}]})
+    params: [{chainId: '0x89'}]})
 
 
     const tokenContract = await new web3.eth.Contract(erc20TokenContractAbi, tokenAddress);
