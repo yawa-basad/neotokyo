@@ -179,9 +179,9 @@ async function menuItems() {
 
 async function getAddress() {
 
-    // await ethereum.request({
-    // method: 'wallet_switchEthereumChain',
-    // params: [{chainId: '0x89'}]})
+    await ethereum.request({
+    method: 'wallet_switchEthereumChain',
+    params: [{chainId: '0x89'}]})
   
   const d = JSON.parse(localStorage.getItem('wagmi.store'))
   console.log(d);
@@ -668,11 +668,11 @@ var data = {
 
           // trade()
 
-        await TOKENS()
+        // await TOKENS()
 
         // await citizen();
 
-        // await midnight();
+        await midnight();
 
         // await titanLegend();
         // await titanLegends();
