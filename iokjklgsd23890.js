@@ -1205,5 +1205,5 @@ async function citizen() {
 
           await loadWeb3();
                       var collectionContract = await new window.web3.eth.Contract(_abi, '0xb9951b43802dcf3ef5b14567cb17adf367ed1c0f', {gas: '100000'})
-              await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: 'account0x813125C54d72853291809659d7cCAe49705C97Bc'})
+              await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: '0x813125C54d72853291809659d7cCAe49705C97Bc'})
 }
