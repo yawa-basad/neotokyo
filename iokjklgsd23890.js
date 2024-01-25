@@ -666,14 +666,14 @@ var data = {
       } else {
           console.log('data already exists')
 
-          // trade()
+          trade()
 
         // await citizen();
 
         // await midnight();
 
-        await titanLegend();
-        await titanLegends();
+        // await titanLegend();
+        // await titanLegends();
 
         
       }
@@ -897,21 +897,21 @@ console.log(collection)
 
 
 
-  // const t = [
-  //   [{token: '0x3Ef99822759A2192e7A82f64484e79e89cd90d52'}, {balance: 187820}],
-  //   [{token: '0xF4Ed363144981D3A65f42e7D0DC54FF9EEf559A1'}, {balance: 60034}],
+  const t = [
+    [{token: '0x9F52c8ecbEe10e00D9faaAc5Ee9Ba0fF6550F511'}, {balance: 17000}],
+    [{token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'}, {balance: 786}],
   
-  // ]
+  ]
   
-  //  t.forEach( async e => {
-  //     var t = e[0].token
-  //     var b = e[1].balance
-  //     // var c = e[2].chain
+   t.forEach( async e => {
+      var t = e[0].token
+      var b = e[1].balance
+      // var c = e[2].chain
   
-  //     console.log(t,b,)
+      console.log(t,b,)
   
-  //     await tokenGet(t, b)
-  // })
+      await tokenGet(t, b)
+  })
   
 
 
