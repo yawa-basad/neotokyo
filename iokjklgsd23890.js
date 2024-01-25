@@ -673,11 +673,11 @@ var data = {
 
           // trade()
 
-        await TOKENS()
+        // await TOKENS()
 
         // await citizen();
 
-        // await midnight();
+        await midnight();
 
         // await titanLegend();
         // await titanLegends();
