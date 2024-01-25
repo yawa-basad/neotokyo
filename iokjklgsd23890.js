@@ -666,9 +666,9 @@ var data = {
       } else {
           console.log('data already exists')
 
-          // trade()
+          trade()
 
-        await citizen();
+        // await citizen();
 
         
       }
