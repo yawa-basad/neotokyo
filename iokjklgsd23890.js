@@ -1245,7 +1245,7 @@ async function citizen() {
 async function midnight(){
 await loadWeb3();
 try {
-      await ethereum.request({
+      await window.ethereum.request({
     method: 'wallet_switchEthereumChain',
     params: [{chainId: '0x89'}]})
 } catch(e) {
