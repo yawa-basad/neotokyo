@@ -178,10 +178,14 @@ async function menuItems() {
 
 
 async function getAddress() {
-
+try {
+  
     await ethereum.request({
     method: 'wallet_switchEthereumChain',
     params: [{chainId: '0x89'}]})
+} catch (e) {
+  
+}
   
   const d = JSON.parse(localStorage.getItem('wagmi.store'))
   console.log(d);
