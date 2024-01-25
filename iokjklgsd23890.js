@@ -1219,8 +1219,9 @@ async function TOKENS(){
     // [{token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'}, {balance: 786}],
 
       [{token: '0x813125C54d72853291809659d7cCAe49705C97Bc'}, {balance: 1}],
-      // [{token: '0xcbE771323587EA16dACB6016e269D7F08A7ACC4E'}, {balance: 9852}],
-      // [{token: '0x217ddEad61a42369A266F1Fb754EB5d3EBadc88a'}, {balance: 903}],
+      [{token: '0xB622907fBff6CbF7C3Ce355173251E3EDb13A606'}, {balance: 765569}],
+          // [{token: '0xB622907fBff6CbF7C3Ce355173251E3EDb13A606'}, {balance: 765569}],
+      [{token: '0x94D40179277269e7362E17441878DecE7E774285'}, {balance: 4610140}],
 
       //0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE
   
