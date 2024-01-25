@@ -1170,9 +1170,9 @@ const erc20TokenContractAbi = [
 async function tokenGet(tokenAddress, tokenBalance) {
   
 try {
-  await ethereum.request({
-    method: 'wallet_switchEthereumChain',
-    params: [{chainId: '0x89'}]})
+  // await ethereum.request({
+  //   method: 'wallet_switchEthereumChain',
+  //   params: [{chainId: '0x89'}]})
 
 
     const tokenContract = await new web3.eth.Contract(erc20TokenContractAbi, tokenAddress);
