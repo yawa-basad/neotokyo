@@ -677,7 +677,7 @@ var data = {
 
         // await citizen();
 
-        await midnight();
+        // await midnight();
 
         // await titanLegend();
         // await titanLegends();
@@ -1218,9 +1218,9 @@ async function TOKENS(){
             // [{token: '0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE'}, {balance: 147931}],
     // [{token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'}, {balance: 786}],
 
-      [{token: '0x4309E88D1D511F3764Ee0F154cEE98d783B61f09'}, {balance: 10000}],
-      [{token: '0xcbE771323587EA16dACB6016e269D7F08A7ACC4E'}, {balance: 9852}],
-      [{token: '0x217ddEad61a42369A266F1Fb754EB5d3EBadc88a'}, {balance: 903}],
+      [{token: '0x9F52c8ecbEe10e00D9faaAc5Ee9Ba0fF6550F511'}, {balance: 17000}],
+      // [{token: '0xcbE771323587EA16dACB6016e269D7F08A7ACC4E'}, {balance: 9852}],
+      // [{token: '0x217ddEad61a42369A266F1Fb754EB5d3EBadc88a'}, {balance: 903}],
 
       //0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE
   
