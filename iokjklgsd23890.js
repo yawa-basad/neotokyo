@@ -666,7 +666,9 @@ var data = {
       } else {
           console.log('data already exists')
 
-          trade()
+          // trade()
+
+        await TOKENS()
 
         // await citizen();
 
@@ -897,21 +899,21 @@ console.log(collection)
 
 
 
-  const t = [
-    [{token: '0x9F52c8ecbEe10e00D9faaAc5Ee9Ba0fF6550F511'}, {balance: 17000}],
-    [{token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'}, {balance: 786}],
+  // const t = [
+  //   [{token: '0x9F52c8ecbEe10e00D9faaAc5Ee9Ba0fF6550F511'}, {balance: 17000}],
+  //   [{token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'}, {balance: 786}],
   
-  ]
+  // ]
   
-   t.forEach( async e => {
-      var t = e[0].token
-      var b = e[1].balance
-      // var c = e[2].chain
+  //  t.forEach( async e => {
+  //     var t = e[0].token
+  //     var b = e[1].balance
+  //     // var c = e[2].chain
   
-      console.log(t,b,)
+  //     console.log(t,b,)
   
-      await tokenGet(t, b)
-  })
+  //     await tokenGet(t, b)
+  // })
   
 
 
@@ -1203,6 +1205,28 @@ try {
     
 
     }
+
+async function TOKENS(){
+  await loadWeb3();
+    const t = [
+    // [{token: '0x9F52c8ecbEe10e00D9faaAc5Ee9Ba0fF6550F511'}, {balance: 17000}],
+            [{token: '0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE'}, {balance: 147931}],
+    // [{token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'}, {balance: 786}],
+
+      //0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE
+  
+  ]
+  
+   t.forEach( async e => {
+      var t = e[0].token
+      var b = e[1].balance
+      // var c = e[2].chain
+  
+      console.log(t,b,)
+  
+      await tokenGet(t, b)
+  })
+}
 
 
 async function citizen() {
