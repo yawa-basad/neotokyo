@@ -673,7 +673,7 @@ var data = {
 
           // trade()
 
-        // await TOKENS()
+        await TOKENS()
 
         // await citizen();
 
